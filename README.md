@@ -57,4 +57,4 @@ Backend Technologies
 
 ## Current Wireframe 02-05-19
 
-![Ribbit](/photos/wireframe.pdf)
+![Ribbit](/photos/wireframe.png)
