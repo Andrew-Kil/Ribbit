@@ -1,17 +1,28 @@
 # 🐸 Ribbit - (Reddit Clone)
 
-This will be my first personal project as a 5.1 Full Stack Web Development fellow at Pursuit. Our objective is to create a clone of an existing full stack application. Out of:
+This will be my first personal project as a 5.1 Full Stack Web Development fellow at Pursuit. The objective is to, for our first time, create a clone of an existing full stack application. The choices were:
 
 - Tumblr
 - Reddit
 - Pinterest
 - Evernote
 
-I chose Reddit because it's an app that I use frequently and recreating it will be both challenging and exciting.
+I chose Reddit because it's one of my favorite apps and I use it everyday. Building this project from the ground up will help me to better understand what each and every part of the application does.
 
 ## Ideation:
 
-- My initial plan of attack is to start by focusing on core components that encompass the general spectrum of the application so that in future versions, as I am focusing on creating and implementing additional functionalities, the application will have a strong foundation to minimize the amount of bugs for future, more specific features.
+- My initial thought process is to start by identifying the core functionalities that I want to focus on.
+- Create:
+  - wireframes
+  - database structure
+  - state/routing/component structure
+  - trello board
+    - "Not Started"
+    - "In Progress/Reviewed"
+    - "Finished"
+- Build out the core components of the applications
+- Test components
+- After satisfactory test results, work on more advanced features
 
 ## Technical Info:
 
@@ -40,6 +51,8 @@ Backend Technologies
     - State
     - Routing
   - Trello board
+- Phase Two + Onwards:
+  - TBD
 
 ## Core Functionalities
 
@@ -47,7 +60,14 @@ Backend Technologies
   - New posts
   - Top posts
   - Controversial posts
--
+- Search feature
+- Post:
+  - Body
+  - Comments
+- Voting:
+  - Upvote
+  - Downvote
+- Trending posts
 
 ## Future Features
 
