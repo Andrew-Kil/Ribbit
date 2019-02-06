@@ -15,7 +15,7 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 
 ## Ideation:
 
-- My initial thought process is to start by identifying the core functionalities that I want to focus on.
+- My initial thought process is to start by identifying the core functionalities that I want to focus on
 - Create:
   - wireframes
   - database structure
@@ -27,7 +27,7 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 - Build out the core components of the applications
 - Test components
 - After satisfactory test results, work on more advanced features
-- My initial plan of attack is to start by focusing on core components that encompass the general spectrum of the application so that in future versions, as I am focusing on creating and implementing additional functionalities, the application will have a strong foundation to minimize the amount of bugs in the future.
+- My initial plan of attack is to start by focusing on core components that encompass the general spectrum of the application so that in future versions, as I am focusing on creating and implementing additional functionalities, the application will have a strong foundation to minimize the amount of bugs in the future
 
 ## Technical Info:
 
@@ -48,7 +48,7 @@ Backend Technologies
   - Wireframing
     - https://www.draw.io/
     - https://wireframe.cc/
-  - Creating Ribbit logo
+  - Creating Ribbit logo (using Pixel Art)
     - https://www.pixilart.com/
     - Photoshop
   - Plan out database structure
@@ -60,6 +60,8 @@ Backend Technologies
   - TBD
 
 ## Core Functionalities
+
+Minimum Viable Product:
 
 - Display posts that are sortable by:
   - New posts
@@ -83,3 +85,4 @@ Backend Technologies
 - Ability to navigate to different subribbits (subreddits)
 - Dark mode setting 😎
 - Log-in/log-out functionality
+- Add Wiki section to GitHub repo
