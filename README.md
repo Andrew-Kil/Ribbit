@@ -61,7 +61,6 @@ Backend Technologies
   - New posts
   - Top posts
   - Controversial posts
-    <<<<<<< HEAD
 - Search feature
 - Post:
   - Body
@@ -74,7 +73,6 @@ Backend Technologies
 - Trending posts
 - Add posts
 - Upvote / Downvote
-  > > > > > > > 866929e5abf5f105aecc5c95bab5875ddbcf6e33
 
 ## Future Features
 
