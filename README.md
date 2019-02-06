@@ -54,3 +54,7 @@ Backend Technologies
 - Ability to navigate to different subribbits (subreddits)
 - Dark mode setting 😎
 - Log-in/log-out functionality
+
+## Current Wireframe 02-05-19
+
+![Ribbit](/photos/wireframe.pdf)
