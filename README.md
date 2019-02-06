@@ -63,6 +63,8 @@ Backend Technologies
 
 Minimum Viable Product:
 
+<!-- Reddit: Users, Posts, Comments, Upvotes/Downvotes, Subreddits -->
+
 - Display posts that are sortable by:
   - New posts
   - Top posts
@@ -74,7 +76,6 @@ Minimum Viable Product:
 - Voting:
   - Upvote
   - Downvote
-- Trending posts
 - Search
 - Trending posts
 - Add posts
