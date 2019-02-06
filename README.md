@@ -73,3 +73,5 @@ Backend Technologies
 - Add Wiki section to GitHub repo
 
 Check out the Wiki for information about the design docs
+
+Made with ❤  by Andrew Kil 🐔
