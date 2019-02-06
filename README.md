@@ -13,6 +13,12 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 
 ![Ribbit](/photos/wireframe.png)
 
+## Design Docs
+
+- Check out the Wiki to view the design docs:
+
+  - https://github.com/Andrew-Kil/Ribbit/wiki
+
 ## Ideation:
 
 - My initial thought process is to start by identifying the core functionalities that I want to focus on
@@ -59,31 +65,11 @@ Backend Technologies
 - Phase Two + Onwards:
   - TBD
 
-## Core Functionalities
-
-Minimum Viable Product:
-
-<!-- Reddit: Users, Posts, Comments, Upvotes/Downvotes, Subreddits -->
-
-- Display posts that are sortable by:
-  - New posts
-  - Top posts
-  - Controversial posts
-- Search feature
-- Post:
-  - Body
-  - Comments
-- Voting:
-  - Upvote
-  - Downvote
-- Search
-- Trending posts
-- Add posts
-- Upvote / Downvote
-
 ## Future Features
 
 - Ability to navigate to different subribbits (subreddits)
 - Dark mode setting 😎
 - Log-in/log-out functionality
 - Add Wiki section to GitHub repo
+
+Check out the Wiki for information about the design docs
