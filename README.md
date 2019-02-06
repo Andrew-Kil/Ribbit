@@ -11,7 +11,6 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 
 ## Ideation:
 
-<<<<<<< HEAD
 - My initial thought process is to start by identifying the core functionalities that I want to focus on.
 - Create:
   - wireframes
@@ -24,9 +23,7 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 - Build out the core components of the applications
 - Test components
 - After satisfactory test results, work on more advanced features
-=======
 - My initial plan of attack is to start by focusing on core components that encompass the general spectrum of the application so that in future versions, as I am focusing on creating and implementing additional functionalities, the application will have a strong foundation to minimize the amount of bugs in the future.
->>>>>>> 866929e5abf5f105aecc5c95bab5875ddbcf6e33
 
 ## Technical Info:
 
@@ -64,7 +61,7 @@ Backend Technologies
   - New posts
   - Top posts
   - Controversial posts
-<<<<<<< HEAD
+    <<<<<<< HEAD
 - Search feature
 - Post:
   - Body
@@ -72,13 +69,12 @@ Backend Technologies
 - Voting:
   - Upvote
   - Downvote
-- Trending posts
-=======
+- # Trending posts
 - Search
 - Trending posts
 - Add posts
 - Upvote / Downvote
->>>>>>> 866929e5abf5f105aecc5c95bab5875ddbcf6e33
+  > > > > > > > 866929e5abf5f105aecc5c95bab5875ddbcf6e33
 
 ## Future Features
 
