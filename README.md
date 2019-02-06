@@ -11,7 +11,7 @@ I chose Reddit because it's an app that I use frequently and recreating it will 
 
 ## Ideation:
 
-- My initial plan of attack is to start by focusing on core components that encompass the general spectrum of the application so that in future versions, as I am focusing on creating and implementing additional functionalities, the application will have a strong foundation to minimize the amount of bugs for future, more specific features.
+- My initial plan of attack is to start by focusing on core components that encompass the general spectrum of the application so that in future versions, as I am focusing on creating and implementing additional functionalities, the application will have a strong foundation to minimize the amount of bugs in the future.
 
 ## Technical Info:
 
@@ -47,7 +47,10 @@ Backend Technologies
   - New posts
   - Top posts
   - Controversial posts
--
+- Search
+- Trending posts
+- Add posts
+- Upvote / Downvote
 
 ## Future Features
 
