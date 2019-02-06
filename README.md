@@ -9,6 +9,10 @@ This will be my first personal project as a 5.1 Full Stack Web Development fello
 
 I chose Reddit because it's one of my favorite apps and I use it everyday. Building this project from the ground up will help me to better understand what each and every part of the application does.
 
+## Current Wireframe 02-05-19
+
+![Ribbit](/photos/wireframe.png)
+
 ## Ideation:
 
 - My initial thought process is to start by identifying the core functionalities that I want to focus on.
@@ -68,7 +72,7 @@ Backend Technologies
 - Voting:
   - Upvote
   - Downvote
-- # Trending posts
+- Trending posts
 - Search
 - Trending posts
 - Add posts
@@ -79,7 +83,3 @@ Backend Technologies
 - Ability to navigate to different subribbits (subreddits)
 - Dark mode setting 😎
 - Log-in/log-out functionality
-
-## Current Wireframe 02-05-19
-
-![Ribbit](/photos/wireframe.png)
