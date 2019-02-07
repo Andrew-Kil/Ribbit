@@ -1,13 +1,12 @@
 # 🐸 Ribbit - (Reddit Clone)
 
-This will be my first personal project as a 5.1 Full Stack Web Development fellow at Pursuit. The objective is to, for our first time, create a clone of an existing full stack application. The choices were:
-
+This is my first full stack personal project as a 5.1 Full Stack Web Development fellow at Pursuit. The objective is to create a clone of an existing full stack application. The choices are:
 - Tumblr
 - Reddit
 - Pinterest
 - Evernote
 
-I chose Reddit because it's one of my favorite apps and I use it everyday. Building this project from the ground up will help me to better understand what each and every part of the application does.
+I chose Reddit because it's one of my favorite apps and I use it everyday. Building this project from the ground up will help me better understand what each and every part of the application does.
 
 ## Current Wireframe 02-05-19
 
@@ -21,7 +20,7 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 
 ## Ideation:
 
-- My initial thought process is to start by identifying the core functionalities that I want to focus on
+- My initial thought process was to start by identifying the core functionalities that I wanted to focus on
 - Create:
   - wireframes
   - database structure
@@ -48,32 +47,8 @@ Backend Technologies
 - ExpressJS
 ```
 
-## Timeline
-
-- Phase One:
-  - Wireframing
-    - https://www.draw.io/
-    - https://wireframe.cc/
-  - Creating Ribbit logo (using Pixel Art)
-    - https://www.pixilart.com/
-    - Photoshop
-  - Plan out database structure
-  - Create example/demo of:
-    - State
-    - Routing
-  - Trello board
-- Phase Two + Onwards:
-  - TBD
-
 ## Future Features
 
 - Ability to navigate to different subribbits (subreddits)
 - Dark mode setting 😎
 - Log-in/log-out functionality
-- Add Wiki section to GitHub repo
-
-Check out the Wiki for information about the design docs
-
----
-
-Made with ❤  by Andrew Kil 🐔
