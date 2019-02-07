@@ -37,8 +37,9 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 ## Terminology:
 - Frogs (Users)
 - Subribbit (Subreddit)
-- Upcroak (Upvote)
-- Downcroack (Downvote)
+- Croaks (Votes)
+  - Upcroak (Upvote)
+  - Downcroack (Downvote)
 
 ## Technical Info:
 
