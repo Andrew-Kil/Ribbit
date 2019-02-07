@@ -34,6 +34,12 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 - After satisfactory test results, work on more advanced features
 - My initial plan of attack is to start by focusing on core components that encompass the general spectrum of the application so that in future versions, as I am focusing on creating and implementing additional functionalities, the application will have a strong foundation to minimize the amount of bugs in the future
 
+## Terminology:
+- Frogs (Users)
+- Subribbit (Subreddit)
+- Upcroak (Upvote)
+- Downcroack (Downvote)
+
 ## Technical Info:
 
 ```
