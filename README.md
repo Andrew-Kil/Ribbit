@@ -37,3 +37,7 @@ Backend Technologies
 - Check out the Wiki to view the design docs:
 
   - https://github.com/Andrew-Kil/Ribbit/wiki
+  
+## Trello Board
+
+- https://trello.com/b/rhdQMhTm/ribbit-reddit-clone
