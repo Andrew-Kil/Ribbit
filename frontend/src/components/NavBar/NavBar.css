@@ -1,0 +1,18 @@
+.navbar {
+  background-color: green;
+  height: 80px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.logo {
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.searchBar {
+  border-radius: 5px;
+  height: 30px;
+  font-size: 20px;
+}
