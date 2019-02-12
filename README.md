@@ -10,7 +10,7 @@ I chose Reddit because it's one of my favorite apps and I use it everyday. Build
 
 ## Current Wireframe - 02/05/19
 
-![Ribbit](/photos/wireframe.png)
+![Ribbit](/wireframes/homepage.png)
 
 ## Terminology:
 - Frogs (Users)
