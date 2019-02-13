@@ -5,6 +5,10 @@
   font-size: 40px;
 }
 
+.navbar-form {
+  position: relative;
+}
+
 .logo {
   float: left;
   padding-top: 10px;
@@ -17,10 +21,32 @@
   padding-left: 10px;
 }
 
-.searchBar {
+.search-bar {
   border-radius: 5px;
   height: 30px;
   font-size: 20px;
 }
 
-.magnifying_glass {}
+.user-profile-container {
+  float: right;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  padding-top: 10px;
+  height: 100px;
+  /* position: absolute; */
+}
+
+.user-profile-avatar {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+}
+
+.user-profile-button {
+  border-radius: 5px;
+}
+
+.user-profile-name {
+  font-weight: bold;
+  font-size: 15px;
+}
