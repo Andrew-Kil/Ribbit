@@ -1,5 +1,7 @@
 # 🐸 Ribbit - (Reddit Clone)
 
+![Jumping Frog](/jumping_frog.gif)
+
 This is my first full stack personal project as a 5.1 Full Stack Web Development fellow at Pursuit. The objective is to create a clone of an existing full stack application. The choices are:
 - Tumblr
 - Reddit
