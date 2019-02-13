@@ -11,8 +11,16 @@
   padding-left: 10px;
 }
 
+.frog {
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
 .searchBar {
   border-radius: 5px;
   height: 30px;
   font-size: 20px;
 }
+
+.magnifying_glass {}
