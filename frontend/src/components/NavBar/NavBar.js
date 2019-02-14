@@ -1,37 +1,91 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 import logo from "./logo.png";
 import frog from "./frog.png";
 import magnifying_glass from "./magnifying_glass.png";
 import user_profile_avatar from "./user-profile-avatar.png";
+import fly from "./fly.png";
 
 export default class NavBar extends Component {
   state = {
-    searchInput: ""
+    searchInput: "",
+    darkMode: true
   };
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log("Input submitted");
+  };
+
+  toggleDarkMode = () => {
+    const darkModeState = this.state.darkMode;
+    this.setState({
+      darkMode: !darkModeState
+    });
+    if (darkModeState) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+    // if darkModeState === true
+    //
+  };
+
   render() {
     return (
-      <div className="navbar">
-        <a href="/">
-          <img src={frog} alt="frog" className="frog" height="50" width="50" />
-          <img src={logo} alt="logo" className="logo" height="50" width="100" />
-        </a>
-        <form className="navbar-form">
-          <img
-            src={magnifying_glass}
-            alt="magnifying glass"
-            className="magnifying-glass"
-            height="30"
-            width="30"
-          />
-          <input
-            type="text"
-            value={this.state.searchInput}
-            size="50"
-            placeholder="Search Ribbit"
-            className="search-bar"
-          />
+      <nav className="navbar">
+        <NavLink to={"/"}>
+          <div>
+            <img
+              src={frog}
+              alt="frog"
+              className="frog"
+              height="50"
+              width="50"
+            />
+            <img
+              src={logo}
+              alt="logo"
+              className="logo"
+              height="50"
+              width="100"
+            />
+          </div>
+        </NavLink>
+        <form className="navbar-form" onSubmit={this.handleSubmit}>
+          <div className="search-container">
+            <img
+              src={magnifying_glass}
+              alt="magnifying glass"
+              className="magnifying-glass"
+              height="30"
+              width="30"
+            />
+            <input
+              type="text"
+              name="searchInput"
+              value={this.state.searchInput}
+              size="50"
+              placeholder="Search Ribbit"
+              className="search-bar"
+              onChange={this.handleChange}
+            />
+          </div>
+        </form>
+        <div id="dark-mode">
+          <button id="dark-mode" onClick={this.toggleDarkMode}>
+            Dark Mode
+          </button>
+        </div>
+        <NavLink to={"/user"}>
           <div className="user-profile-container">
             <button className="user-profile-button">
               <div className="user-profile">
@@ -41,12 +95,15 @@ export default class NavBar extends Component {
                   alt="avatar for user"
                 />
                 <span className="user-profile-name">what_the_frog_m8</span>
-                <div className="user-profile-karma">182 karma</div>
+                <div>
+                  <img src={fly} alt="fly" id="fly" />
+                  <span className="user-profile-karma">182 karma</span>
+                </div>
               </div>
             </button>
           </div>
-        </form>
-      </div>
+        </NavLink>
+      </nav>
     );
   }
 }

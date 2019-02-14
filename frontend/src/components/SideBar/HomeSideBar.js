@@ -12,7 +12,6 @@ export default function HomeSideBar() {
             <div className="home-side-bar-frog">
               <div className="home-side-bar-home-text">Home</div>
             </div>
-
             <div className="home-side-bar-body-text">
               Your personal Ribbit frontpage. Come here to check in with your
               favorite communities.

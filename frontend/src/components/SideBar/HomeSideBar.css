@@ -38,15 +38,18 @@
   background: url(./home-frog.png) center center / cover no-repeat;
   margin-top: 10px;
   margin-left: 10px;
+  margin-bottom: 1em;
 }
 
 .home-side-bar-home-text {
   margin-left: 50px;
   font-size: 20px;
+
 }
 
 .home-side-bar-body-text {
   font-size: 15px;
+  margin-bottom: 1em;
 }
 
 .home-side-bar-create-post-button {

@@ -1,4 +1,7 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   background-color: green;
   height: 80px;
   text-align: center;
@@ -7,6 +10,7 @@
 
 .navbar-form {
   position: relative;
+  padding-top: 20px;
 }
 
 .logo {
@@ -21,19 +25,32 @@
   padding-left: 10px;
 }
 
-.search-bar {
+#fly {
+  height: 15px;
+  width: 15px;
+}
+
+.search-container {
+  /* display: inline-flex; */
+  /* flex: 1 1 300px; */
+  border: 1px solid lightslategrey;
   border-radius: 5px;
-  height: 30px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.search-bar {
   font-size: 20px;
+  border: none;
 }
 
 .user-profile-container {
-  float: right;
+  /* float: right; */
   padding-right: 50px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   padding-top: 10px;
-  height: 100px;
-  /* position: absolute; */
+  /* height: 100%; */
+  /* position: relative; */
 }
 
 .user-profile-avatar {
