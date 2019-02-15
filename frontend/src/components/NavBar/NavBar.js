@@ -11,7 +11,7 @@ import fly from "./fly.png";
 export default class NavBar extends Component {
   state = {
     searchInput: "",
-    darkMode: true
+    darkMode: false
   };
 
   handleChange = e => {
@@ -30,13 +30,9 @@ export default class NavBar extends Component {
     this.setState({
       darkMode: !darkModeState
     });
-    if (darkModeState) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-    // if darkModeState === true
-    //
+    darkModeState
+      ? document.body.classList.remove("dark-mode")
+      : document.body.classList.add("dark-mode");
   };
 
   render() {
@@ -80,7 +76,7 @@ export default class NavBar extends Component {
             />
           </div>
         </form>
-        <div id="dark-mode">
+        <div>
           <button id="dark-mode" onClick={this.toggleDarkMode}>
             Dark Mode
           </button>

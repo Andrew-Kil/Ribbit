@@ -1,3 +1,17 @@
+#fly {
+  height: 15px;
+  width: 15px;
+}
+
+#dark-mode {
+  background-image: linear-gradient(to bottom right, black, lightslategrey);
+  border: 2px black solid;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,11 +37,6 @@
   float: left;
   padding-top: 10px;
   padding-left: 10px;
-}
-
-#fly {
-  height: 15px;
-  width: 15px;
 }
 
 .search-container {
