@@ -131,3 +131,13 @@ body {
 .dark-mode {
   background-color: #030303;
 }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+}

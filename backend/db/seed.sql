@@ -14,6 +14,7 @@ CREATE TABLE users
 CREATE TABLE posts
 (
     id SERIAL PRIMARY KEY,
+    title VARCHAR NOT NULL,
     body TEXT NOT NULL,
     user_id INT REFERENCES users(id) NOT NULL,
     upcroaks INT,
@@ -25,7 +26,7 @@ CREATE TABLE comments
     id SERIAL PRIMARY KEY,
     body TEXT NOT NULL,
     user_id INT REFERENCES users(id) NOT NULL,
-    post_id INT REFERENCES posts(id) NOT NULL,
+    post_id INT REFERENCES posts(id),
     comment_id INT REFERENCES comments(id),
     upcroaks INT,
     downcroaks INT

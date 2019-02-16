@@ -81,7 +81,7 @@ export default class NavBar extends Component {
             Dark Mode
           </button>
         </div>
-        <NavLink to={"/user"}>
+        <NavLink to={"/users"}>
           <div className="user-profile-container">
             <button className="user-profile-button">
               <div className="user-profile">

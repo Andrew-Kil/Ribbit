@@ -27,7 +27,7 @@ export default function HomeSideBar() {
                 className="home-side-bar-create-community-button"
                 href="/create-community"
               >
-                Create Post
+                Create Community
               </a>
             </div>
           </div>
