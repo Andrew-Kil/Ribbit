@@ -6,19 +6,23 @@ import AdSideBar from "./components/SideBar/AdSideBar.js";
 import "./App.css";
 
 import User from "./components/User/User.js";
+import Login from "./components/Login/Login.js";
+import Signup from "./components/Signup/Signup.js";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <NavBar />
-        <div className="main-content">Stufffffff</div>
         <div className="side-bar">
           <HomeSideBar />
           <AdSideBar />
         </div>
+        <div className="main-content">Stufffffff</div>
         <Switch>
           <Route exact path="/users" component={User} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
         </Switch>
       </div>
     );

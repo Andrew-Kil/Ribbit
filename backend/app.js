@@ -10,26 +10,30 @@ const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/posts");
 const commentsRouter = require("./routes/comments");
 
-const users = require("./routes/users.js");
-const posts = require("./routes/posts.js");
-const comments = require("./routes/comments.js");
+// const users = require("./routes/users.js");
+// const posts = require("./routes/posts.js");
+// const comments = require("./routes/comments.js");
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use("/users", users);
-app.use("/posts", posts);
-app.use("/comments", comments);
+// app.use("/users", users);
+// app.use("/posts", posts);
+// app.use("/comments", comments);
 
-app.get("/", (req, res) => {
-  res.send("This is the homepage");
-});
+// app.get("/", (req, res) => {
+//   res.send("This is the homepage");
+// });
 
-app.listen(3003, () => {
-  console.log("Listening to port 3003");
-});
+// app.get("/users", (req, res) => {
+//   res.send("This is the users page");
+// });
+
+// app.listen(3003, () => {
+//   console.log("Listening to port 3003");
+// });
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

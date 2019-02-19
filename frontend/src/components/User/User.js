@@ -1,46 +1,49 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import "./User.css";
-import axios from "axios";
 
 import UserList from "./UserList.js";
 
 export default class User extends Component {
   state = {
-    users: []
+    users: [],
+    fetchedUsers: false
   };
 
   componentDidMount() {
-    console.log("hello");
-    // https://crossorigin.me/
-    axios
-      .get("http://localhost:3003/users")
-      .then(res => {
-        console.log("hi");
-        console.log(res);
-        debugger;
-        let data = res.data;
-        this.setState({ users: data });
-        console.log(this.state.users);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    fetch("/users")
+      .then(res => res.json())
+      .then(data =>
+        this.setState({ users: data.data, fetchedUsers: true }, () =>
+          console.log("successfully fetched all users", this.state.users)
+        )
+      );
   }
 
   renderUserList = () => {
-    const { users } = this.state;
-
+    const { users } = this.state.users;
+    console.log("RENDER LIST STATE", this.state);
     return <UserList users={users} />;
+
+    // console.log(this.state.users);
+    // console.log(this.state.users.username)
+
+    // let results = this.state.users.map(user => {
+    //   return <div key={user.id}>{user.username}</div>;
+    // });
+    // console.log(results);
+    // return results;
   };
 
   render() {
     console.log("user");
-    console.log(this.state);
+    console.log(this.state.users);
+    console.log(this.state.fetchedUsers);
     return (
       <>
         <div className="userTitle">User Profile</div>
-        <Route exact path="/users" render={this.renderUserList} />
+        {this.state.fetchedUsers && this.renderUserList()}
+        {/* <Route exact path="/users" render={this.renderUserList} /> */}
       </>
     );
   }

@@ -81,7 +81,7 @@ export default class NavBar extends Component {
             Dark Mode
           </button>
         </div>
-        <NavLink to={"/users"}>
+        {/* <NavLink to={"/users"}>
           <div className="user-profile-container">
             <button className="user-profile-button">
               <div className="user-profile">
@@ -98,7 +98,28 @@ export default class NavBar extends Component {
               </div>
             </button>
           </div>
-        </NavLink>
+        </NavLink> */}
+
+        <div className="login-signup">
+          <NavLink to={"/login"}>
+            <a
+              href="https://www.reddit.com/login/?dest=https%3A%2F%2Fwww.reddit.com%2F"
+              alt="log-in"
+              className="login"
+            >
+              Log-in
+            </a>
+          </NavLink>
+          <NavLink to={"/signup"}>
+            <a
+              href="https://www.reddit.com/register/?dest=https%3A%2F%2Fwww.reddit.com%2F"
+              alt="sign-up"
+              className="signup"
+            >
+              Sign Up
+            </a>
+          </NavLink>
+        </div>
       </nav>
     );
   }

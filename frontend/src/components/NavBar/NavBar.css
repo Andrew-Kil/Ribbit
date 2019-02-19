@@ -76,3 +76,37 @@
   font-weight: bold;
   font-size: 15px;
 }
+
+.login-signup {
+  width: 256px;
+  height: 32px;
+}
+
+.login,
+.signup {
+  width: 120px;
+  height: 32px;
+  font-size: 20px;
+
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: white;
+  color: rgb(0, 121, 211);
+  fill: rgb(0, 121, 211);
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 3px 16px;
+  border-color: rgb(0, 121, 211);
+}
+
+.signup {
+  margin-left: 12px;
+}
