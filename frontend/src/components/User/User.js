@@ -20,31 +20,42 @@ export default class User extends Component {
       );
   }
 
-  renderUserList = () => {
-    const { users } = this.state.users;
-    console.log("RENDER LIST STATE", this.state);
-    return <UserList users={users} />;
+  // renderUserList = () => {
+  //   const { users } = this.state.users;
+  //   console.log("RENDER LIST STATE", this.state);
+  //   return <UserList users={users} />;
 
-    // console.log(this.state.users);
-    // console.log(this.state.users.username)
+  //   // console.log(this.state.users);
+  //   // console.log(this.state.users.username)
 
-    // let results = this.state.users.map(user => {
-    //   return <div key={user.id}>{user.username}</div>;
-    // });
-    // console.log(results);
-    // return results;
-  };
+  //   // let results = this.state.users.map(user => {
+  //   //   return <div key={user.id}>{user.username}</div>;
+  //   // });
+  //   // console.log(results);
+  //   // return results;
+  // };
 
   render() {
     console.log("user");
     console.log(this.state.users);
     console.log(this.state.fetchedUsers);
-    return (
-      <>
-        <div className="userTitle">User Profile</div>
-        {this.state.fetchedUsers && this.renderUserList()}
-        {/* <Route exact path="/users" render={this.renderUserList} /> */}
-      </>
-    );
+
+    if (this.state.fetchedUsers) {
+      return (
+        <>
+          <div className="userTitle">List of users: </div>
+          {this.state.users.map(user => {
+            return (
+              <div>
+                {user.username} - {user.email} - {user.karma}
+              </div>
+            );
+          })}
+          {/* <Route exact path="/users" render={this.renderUserList} /> */}
+        </>
+      );
+    } else {
+      return null;
+    }
   }
 }
