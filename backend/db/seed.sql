@@ -24,16 +24,16 @@ CREATE TABLE posts
     downcroaks INT
 );
 
--- CREATE TABLE comments
--- (
---     id SERIAL PRIMARY KEY,
---     body TEXT NOT NULL,
---     user_id INT REFERENCES users(id) NOT NULL,
---     post_id INT REFERENCES posts(id) NOT NULL,
---     comment_id INT REFERENCES comments(id),
---     upcroaks INT,
---     downcroaks INT
--- );
+CREATE TABLE comments
+(
+    id SERIAL PRIMARY KEY,
+    body TEXT NOT NULL,
+    user_id INT REFERENCES users(id) NOT NULL,
+    post_id INT REFERENCES posts(id) NOT NULL,
+    comment_id INT REFERENCES comments(id),
+    upcroaks INT,
+    downcroaks INT
+);
 
 INSERT INTO users
     (username, email, karma)
@@ -49,10 +49,10 @@ VALUES
     ('How much wood could a woodchuck chuck if a woodchuck couldnt chuck wood?', 3, 777, 7),
     ('How high can you jump?', 2, 19, 2);
 
--- INSERT INTO comments
---     (body, user_id, post_id, comment_id, upcroaks, downcroaks)
--- VALUES
---     ('great post, would comment again', 1, 2, null, 5, 4),
---     ('I can jump 5 feet high', 2, 3, null, 89, 17),
---     ('green tea', 3, 1, null, 100, 8);
+INSERT INTO comments
+    (body, user_id, post_id, comment_id, upcroaks, downcroaks)
+VALUES
+    ('great post, would comment again', 1, 2, null, 5, 4),
+    ('I can jump 5 feet high', 2, 3, null, 89, 17),
+    ('green tea', 3, 1, null, 100, 8);
 

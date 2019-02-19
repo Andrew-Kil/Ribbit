@@ -7,6 +7,7 @@ import "./App.css";
 
 import User from "./components/User/User.js";
 import Post from "./components/Post/Post.js";
+import Comment from "./components/Comment/Comment.js";
 import Login from "./components/Login/Login.js";
 import Signup from "./components/Signup/Signup.js";
 
@@ -23,6 +24,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/users" component={User} />
           <Route exact path="/posts" component={Post} />
+          <Route exact path="/comments" component={Comment} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
         </Switch>

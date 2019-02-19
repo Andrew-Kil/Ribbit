@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
 
 export default class Post extends Component {
   state = {
@@ -29,7 +28,6 @@ export default class Post extends Component {
             </div>
           );
         })}
-        {/* <Route exact path="/users" render={this.renderUserList} /> */}
       </>
     );
   }
