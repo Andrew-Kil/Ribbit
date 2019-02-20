@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "./Login.css";
+import frog from "../NavBar/frog.png";
 
 export default class Login extends Component {
   state = {
@@ -15,13 +17,26 @@ export default class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    console.log("FORM SUBMITTED");
   };
+
+  validateForm() {
+    return this.state.username.length > 0 && this.state.password.length > 0;
+  }
 
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <fieldset>
+          <fieldset className="signin-username-fieldset">
+            <img
+              src={frog}
+              alt="frog"
+              className="frog"
+              height="50"
+              width="50"
+            />
+            <h1 className="signin-title">Sign in</h1>
             <input
               id="loginUsername"
               class="AnimatedForm__textInput"
@@ -30,7 +45,7 @@ export default class Login extends Component {
               data-empty="true"
               onChange={this.handleChange}
             />
-            <label class="AnimatedForm__textInputLabel" for="loginUsername">
+            <label class="username-text-input" for="loginUsername">
               Username
             </label>
           </fieldset>
@@ -47,10 +62,18 @@ export default class Login extends Component {
               Password
             </label>
           </fieldset>
-          <button class="AnimatedForm__submitButton" type="submit">
+          <button
+            class="AnimatedForm__submitButton"
+            type="submit"
+            disabled={!this.validateForm()}
+          >
             Sign in
           </button>
         </form>
+        New to Ribbit? {""}
+        <a href="/signup" className="signup-link">
+          Sign Up
+        </a>
       </div>
     );
   }

@@ -110,3 +110,9 @@
 .signup {
   margin-left: 12px;
 }
+
+.usersLink,
+.postsLink,
+.commentsLink {
+  font-size: 20px;
+}

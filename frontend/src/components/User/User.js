@@ -17,10 +17,6 @@ export default class User extends Component {
   }
 
   render() {
-    console.log("user");
-    console.log(this.state.users);
-    console.log(this.state.fetchedUsers);
-
     return (
       <>
         <div className="userTitle">List of users: </div>
