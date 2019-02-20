@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: green;
+  background-color: rgb(23, 221, 23);
   height: 80px;
   text-align: center;
   font-size: 40px;
@@ -123,4 +123,8 @@
   border-style: solid;
   border-color: rgb(46, 0, 211);
   border-image: initial;
+}
+
+.dark-mode {
+  background-color: #030303;
 }

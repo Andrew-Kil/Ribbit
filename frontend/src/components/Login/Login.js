@@ -26,7 +26,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form-container">
         <form onSubmit={this.handleSubmit}>
           <fieldset className="signin-username-fieldset">
             <img
@@ -69,11 +69,11 @@ export default class Login extends Component {
           >
             Sign in
           </button>
+          <p>New to Ribbit?</p>
+          <a href="/signup" className="signup-link">
+            Sign Up
+          </a>
         </form>
-        New to Ribbit? {""}
-        <a href="/signup" className="signup-link">
-          Sign Up
-        </a>
       </div>
     );
   }

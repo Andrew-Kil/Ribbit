@@ -4,12 +4,12 @@ import "./Signup.css";
 export default class Signup extends Component {
   render() {
     return (
-      <>
+      <div className="form-container">
         <form>
           <h1 className="signup-title">Join the worldwide conversation.</h1>
           <p className="signup-description">
-            By having a Reddit account, you can subscribe, vote, and comment on
-            all your favorite Reddit content. <br />
+            By having a Ribbit account, you can subscribe, vote, and comment on
+            all your favorite Ribbit content. <br />
             Sign up in just seconds.
           </p>
           <fieldset className="email-fieldset">
@@ -49,7 +49,7 @@ export default class Signup extends Component {
             .
           </p>
         </form>
-      </>
+      </div>
     );
   }
 }

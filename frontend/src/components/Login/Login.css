@@ -26,6 +26,16 @@
   background-color: #fcfcfb;
 }
 
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-top: 100px;
+  width: 800px;
+  margin-left: 300px;
+}
+
 .signup-link {
   text-decoration: none;
 }
