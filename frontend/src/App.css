@@ -128,6 +128,29 @@ body {
   height: 100%;
 }
 
+.body-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 1248px;
+  position: relative;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+
+@media (min-width: 960px) {
+  .main-content-container {
+    width: 648px;
+  }
+}
+
 .dark-mode {
   background-color: #030303;
 }

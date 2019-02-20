@@ -5,6 +5,7 @@ import HomeSideBar from "./components/SideBar/HomeSideBar.js";
 import AdSideBar from "./components/SideBar/AdSideBar.js";
 import "./App.css";
 
+import Home from "./components/Home/Home.js";
 import User from "./components/User/User.js";
 import Post from "./components/Post/Post.js";
 import Comment from "./components/Comment/Comment.js";
@@ -18,26 +19,15 @@ class App extends Component {
         <NavBar />
         {/* <div className="main-content">Stufffffff</div> */}
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route exact path="/users" component={User} />
           <Route exact path="/posts" component={Post} />
           <Route exact path="/comments" component={Comment} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
         </Switch>
-        <div className="side-bar">
-          <HomeSideBar />
-          <AdSideBar />
-        </div>
 
-        <div className="join-the-discussion">
-          <h1 className="join-the-discussion-title">Join the discussion</h1>
-          <span class="join-the-discussion-description">
-            Come for the cats, stay for the empathy.
-          </span>
-          <a class="become-a-ribbitor" href="/signup">
-            Become a ribbitor
-          </a>
-        </div>
+        
       </div>
     );
   }

@@ -116,3 +116,11 @@
 .commentsLink {
   font-size: 20px;
 }
+
+.search-container:hover {
+  background-color: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(46, 0, 211);
+  border-image: initial;
+}
