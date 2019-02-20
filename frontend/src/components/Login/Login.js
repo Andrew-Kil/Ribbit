@@ -17,6 +17,9 @@ export default class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if (this.state.username === "bob" && this.state.password === "smith") {
+      console.log("LOGIN SUCCESS");
+    }
     console.log("FORM SUBMITTED");
   };
 
