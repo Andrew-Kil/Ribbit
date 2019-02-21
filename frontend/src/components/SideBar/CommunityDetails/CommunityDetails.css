@@ -1,0 +1,97 @@
+.community-details-side-bar {
+  height: 265px;
+  width: 332px;
+  border: 1px grey solid;
+  border-radius: 5px;
+  float: right;
+  margin-right: 200px;
+  margin-top: 50px;
+  background-color: white;
+}
+
+.community-details-side-bar-padding {
+  border: 5px black solid;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  height: 229px;
+  width: 300px;
+  padding: 12px;
+}
+
+.community-details-side-bar-banner {
+  height: 34px;
+  width: 100%;
+  background-color: rgb(13, 211, 187);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.community-details-side-bar-logo {
+  height: 68px;
+  position: relative;
+  width: 40px;
+  height: 25%;
+  width: 25%;
+  background: url(./punny-logo.png) center center / cover no-repeat;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 1em;
+}
+
+.community-details-side-bar-subribbit-text {
+  margin-left: 150px;
+  font-size: 20px;
+}
+
+.community-details-side-bar-body-text {
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+
+.community-details-side-bar-subscribe-button {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: rgb(7, 115, 102);
+  color: rgb(255, 255, 255);
+  fill: rgb(255, 255, 255);
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 3px 16px;
+  border-color: rgb(7, 115, 102);
+}
+
+.community-details-side-bar-create-post-button {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgb(7, 115, 102);
+  color: rgb(255, 255, 255);
+  fill: rgb(7, 115, 102);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 32px;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-radius: 4px;
+  text-decoration: none;
+  border-color: rgb(7, 115, 102);
+  padding: 0px 16px;
+}

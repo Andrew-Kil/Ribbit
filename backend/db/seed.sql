@@ -7,10 +7,10 @@ CREATE TABLE users
 (
     id SERIAL PRIMARY KEY,
     username VARCHAR(20) UNIQUE NOT NULL,
-    email VARCHAR(40) NOT NULL,
-    karma INT
+    password VARCHAR(30) NOT NULL,
+    email VARCHAR(40) NOT NULL
 );
-´
+
 CREATE TABLE subribbits
 (
     id SERIAL PRIMARY KEY,
@@ -42,18 +42,20 @@ CREATE TABLE comments
 );
 
 INSERT INTO users
-    (username, email, karma)
+    (username, password, email)
 VALUES
-    ('bob_the_builder', 'bob@bobbybuilds.com', 888),
-    ('kermit_the_frog', 'kermit@hotmail.com', 9000),
-    ('frog_kid', 'dannydevito@IASIP.com', 28709);
+    ('bob_the_builder', 'abc123', 'bob@bobbybuilds.com'),
+    ('kermit_the_frog', 'ilovefrogs9000', 'kermit@hotmail.com'),
+    ('frog_kid', 'password', 'dannydevito@IASIP.com'),
+    ('homer_simpson', 'duffbeer4lyfe', 'homer@simpson'),
+    ('clairebear841', 'bearygoodpassword1234', 'claire@gmail.com');
 
 INSERT INTO subribbits
     (name, info, subscribbitors)
 VALUES
-    ('r/Punny', 'This subribbit is a place to post & comment on punny stuff', 75982),
-    ('r/AskRibbit', 'Welcome to AskRibbit, feel free to ask any questions that you want answered', 938017),
-    ('r/Ponds', 'Here you can post pictures of your favorite pond to chill at', 17193);
+    ('punny', 'This subribbit is a place to post & comment on punny stuff', 75982),
+    ('askRibbit', 'Welcome to AskRibbit, feel free to ask any questions that you want answered', 938017),
+    ('ponds', 'Here you can post pictures of your favorite pond to chill at', 17193);
 
 INSERT INTO posts
     (title, body, user_id, sub_id, upcroaks, downcroaks)
@@ -69,4 +71,6 @@ INSERT INTO comments
 VALUES
     ('great post, would comment again', 1, 2, null, 5, 4),
     ('I can jump 5 feet high', 2, 3, null, 89, 17),
-    ('green tea', 3, 1, null, 100, 8);
+    ('green tea', 3, 1, null, 100, 8),
+    ('your comment is trash and so are you', 2, 2, 1, 900, 87),
+    ('I can jump 6 feet high', 4, 3, 2, 3, 0);

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import HomeSideBar from "../SideBar/HomeSideBar.js";
-import AdSideBar from "../SideBar/AdSideBar.js";
+import HomeSideBar from "../SideBar/HomeSideBar/HomeSideBar.js";
+import AdSideBar from "../SideBar/AdSideBar/AdSideBar.js";
 
 import lilypad from "./lilypad.png";
 import pond from "./pond.png";
