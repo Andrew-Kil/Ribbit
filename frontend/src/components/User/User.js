@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./User.css";
+import axios from "axios";
 
 export default class User extends Component {
   state = {
@@ -7,13 +7,14 @@ export default class User extends Component {
   };
 
   componentDidMount() {
-    fetch("/users")
-      .then(res => res.json())
-      .then(data =>
-        this.setState({ users: data.data }, () =>
-          console.log("successfully fetched all users", this.state.users)
-        )
-      );
+    axios
+      .get("/users")
+      .then(res => {
+        this.setState({ users: res.data.data }, () =>
+          console.log("GOT ALL USERS: ", this.state.users)
+        );
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
