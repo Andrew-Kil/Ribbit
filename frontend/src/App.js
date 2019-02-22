@@ -10,6 +10,7 @@ import Comment from "./components/Comment/Comment.js";
 import Login from "./components/Login/Login.js";
 import Signup from "./components/Signup/Signup.js";
 import Punny from "./components/Subribbits/Punny.js";
+import Subribbits from "./components/Subribbits/Subribbits.js";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route exact path="/comments" component={Comment} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route path="/subribbits" component={Subribbits} />
           <Route path="/r/punny" component={Punny} />
         </Switch>
       </div>

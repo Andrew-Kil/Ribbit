@@ -109,6 +109,9 @@ export default class NavBar extends Component {
         <NavLink to={"/comments"}>
           <span className="commentsLink">Comments</span>
         </NavLink>
+        <NavLink to={"/subribbits"}>
+          <span className="subribbitsLink">Subribbits</span>
+        </NavLink>
 
         <div className="login-signup">
           <NavLink to={"/login"}>
