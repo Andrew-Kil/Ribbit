@@ -54,9 +54,12 @@ export default class Subribbits extends Component {
         {this.state.subribbits.map(subribbit => {
           return (
             <div id={subribbit.id}>
-              Subribbits - name: {subribbit.name} <br /> Subribbits - info:{" "}
-              {subribbit.info} <br /> Subribbits - subscribbitors:{" "}
-              {subribbit.subscribbitors} <br /> <br />
+              Subribbits - name:
+              <a href={`http://localhost:3000/subribbits/${subribbit.id}`}>
+                {subribbit.name}
+              </a>
+              <br /> Subribbits - info: {subribbit.info} <br /> Subribbits -
+              subscribbitors: {subribbit.subscribbitors} <br /> <br />
             </div>
           );
         })}

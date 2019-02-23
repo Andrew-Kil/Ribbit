@@ -45,6 +45,11 @@ export default class SingleSubribbit extends React.Component {
   }
 
   render() {
-    return this.renderSubribbit();
+    return (
+      <>
+        {this.renderSubribbit()}
+        <a href="http://localhost:3000/subribbits">Back to subribbits</a>
+      </>
+    );
   }
 }
