@@ -55,6 +55,7 @@ a {
   height: 35px;
   width: 155px;
   min-width: 155px;
+  padding-top: 100px;
 }
 
 .email-input-label {

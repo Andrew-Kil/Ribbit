@@ -16,22 +16,6 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.use("/users", users);
-// app.use("/posts", posts);
-// app.use("/comments", comments);
-
-// app.get("/", (req, res) => {
-//   res.send("This is the homepage");
-// });
-
-// app.get("/users", (req, res) => {
-//   res.send("This is the users page");
-// });
-
-// app.listen(3003, () => {
-//   console.log("Listening to port 3003");
-// });
-
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");

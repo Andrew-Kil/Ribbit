@@ -7,7 +7,7 @@ CREATE TABLE users
 (
     id SERIAL PRIMARY KEY,
     username VARCHAR(20) UNIQUE NOT NULL,
-    password VARCHAR(30) NOT NULL,
+    password_digest VARCHAR(30) NOT NULL,
     email VARCHAR(40) NOT NULL
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE comments
 );
 
 INSERT INTO users
-    (username, password, email)
+    (username, password_digest, email)
 VALUES
     ('bob_the_builder', 'abc123', 'bob@bobbybuilds.com'),
     ('kermit_the_frog', 'ilovefrogs9000', 'kermit@hotmail.com'),

@@ -24,8 +24,9 @@ export default class User extends Component {
         {this.state.users.map(user => {
           return (
             <div>
-              User - username: {user.username} <br /> User - email: {user.email}{" "}
-              <br /> User - karma: {user.karma} <br /> <br />
+              Username: {user.username}
+              <br /> Password: {user.password_digest}
+              <br /> Email: {user.email} <br /> <br />
             </div>
           );
         })}
