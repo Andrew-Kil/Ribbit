@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-import logo from "./logo.png";
+import logo from "./ribbit-logo.png";
 import frog from "./frog.png";
 import magnifying_glass from "./magnifying_glass.png";
 // import user_profile_avatar from "./user-profile-avatar.png";
@@ -99,7 +99,7 @@ export default class NavBar extends Component {
             </button>
           </div>
         </NavLink> */}
-        <div className="nav-links">
+        <div>
           <NavLink to={"/users"}>
             <span className="usersLink">Users</span>
           </NavLink>
