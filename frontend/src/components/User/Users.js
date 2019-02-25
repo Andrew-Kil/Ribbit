@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import CommunityDetails from "../SideBar/CommunityDetails/CommunityDetails.js";
 
@@ -44,13 +45,15 @@ export default class Users extends Component {
       <>
         <div className="userTitle">List of users: </div>
         <br />
+        <div>(Click on user to get more info)</div>
+        <br />
         {this.state.users.map(user => {
           return (
             <div id={user.id}>
               Username: {""}
-              <a href={`http://localhost:3000/users/${user.id}`}>{user.username}</a>
-              <br /> Password: {user.password_digest}
-              <br /> Email: {user.email} <br /> <br />
+              <Link to={`/users/${user.id}`}>{user.username}</Link>
+              <br />
+              <br />
             </div>
           );
         })}

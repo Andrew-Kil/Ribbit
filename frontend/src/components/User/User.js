@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-export default class Singleuser extends React.Component {
+export default class User extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -42,7 +43,7 @@ export default class Singleuser extends React.Component {
     return (
       <>
         {this.renderUser()}
-        <a href="http://localhost:3000/users">Back to users</a>
+        <Link to="/users">Back to users</Link>
       </>
     );
   }

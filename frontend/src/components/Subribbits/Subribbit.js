@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-export default class SingleSubribbit extends React.Component {
+export default class Subribbit extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -44,7 +45,7 @@ export default class SingleSubribbit extends React.Component {
     return (
       <>
         {this.renderSubribbit()}
-        <a href="http://localhost:3000/subribbits">Back to subribbits</a>
+        <Link to="/subribbits">Back to subribbits</Link>
       </>
     );
   }

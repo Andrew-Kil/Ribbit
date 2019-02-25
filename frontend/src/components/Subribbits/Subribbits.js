@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import CommunityDetails from "../SideBar/CommunityDetails/CommunityDetails.js";
 
-import SingleSubribbit from "./SingleSubribbit";
+import Subribbit from "./Subribbit";
 
 export default class Subribbits extends Component {
   state = {
@@ -23,7 +24,7 @@ export default class Subribbits extends Component {
       return <div> Could not find subribbit </div>;
     } else {
       return (
-        <SingleSubribbit
+        <Subribbit
           name={subribbit.name}
           info={subribbit.info}
           subscribbitors={subribbit.subscribbitors}
@@ -46,15 +47,14 @@ export default class Subribbits extends Component {
       <>
         <div>List of subribbits: </div>
         <br />
+        <div>(Click on subribbit to get more info)</div>
+        <br />
         {this.state.subribbits.map(subribbit => {
           return (
             <div id={subribbit.id}>
               Name: {""}
-              <a href={`http://localhost:3000/subribbits/${subribbit.id}`}>
-                {subribbit.name}
-              </a>
-              <br /> Info: {subribbit.info} <br /> Subscribbitors:{" "}
-              {subribbit.subscribbitors} <br /> <br />
+              <Link to={`/subribbits/${subribbit.id}`}>{subribbit.name}</Link>
+              <br /> <br />
             </div>
           );
         })}

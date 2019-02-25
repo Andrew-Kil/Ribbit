@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-export default class Post extends Component {
+// import Home from "../Home/Home.js";
+
+export default class Posts extends Component {
   state = {
     posts: []
   };
@@ -12,13 +14,17 @@ export default class Post extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <>
+        {/* <Home data={this.state} /> */}
+
         <div className="postTitle">List of posts: </div>
         <br />
+
         {this.state.posts.map(post => {
           return (
-            <div>
+            <div id={post.id}>
               Title: {post.title} <br />
               Body: {post.body} <br /> User_id: {post.user_id} <br /> Upcroaks:{" "}
               {post.upcroaks} <br /> Downcroaks: {post.downcroaks} <br /> <br />
