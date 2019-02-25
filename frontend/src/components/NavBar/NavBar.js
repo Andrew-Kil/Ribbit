@@ -99,19 +99,20 @@ export default class NavBar extends Component {
             </button>
           </div>
         </NavLink> */}
-
-        <NavLink to={"/users"}>
-          <span className="usersLink">Users</span>
-        </NavLink>
-        <NavLink to={"/posts"}>
-          <span className="postsLink">Posts</span>
-        </NavLink>
-        <NavLink to={"/comments"}>
-          <span className="commentsLink">Comments</span>
-        </NavLink>
-        <NavLink to={"/subribbits"}>
-          <span className="subribbitsLink">Subribbits</span>
-        </NavLink>
+        <div className="nav-links">
+          <NavLink to={"/users"}>
+            <span className="usersLink">Users</span>
+          </NavLink>
+          <NavLink to={"/posts"}>
+            <span className="postsLink">Posts</span>
+          </NavLink>
+          <NavLink to={"/comments"}>
+            <span className="commentsLink">Comments</span>
+          </NavLink>
+          <NavLink to={"/subribbits"}>
+            <span className="subribbitsLink">Subribbits</span>
+          </NavLink>
+        </div>
 
         <div className="login-signup">
           <NavLink to={"/login"}>

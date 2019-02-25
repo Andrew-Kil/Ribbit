@@ -19,15 +19,14 @@ export default class Comment extends Component {
     return (
       <>
         <div className="postTitle">List of comments: </div>
+        <br />
         {this.state.comments.map(comment => {
           return (
             <div>
-              Comment - body: {comment.body} <br /> Comment - user_id:{" "}
-              {comment.user_id} <br />
-              Comment - post_id: {comment.post_id} <br /> Comment - comment_id:{" "}
-              {comment.comment_id}
-              <br /> Comment - upcroaks: {comment.upcroaks} <br /> Comment -
-              downcroaks: {comment.downcroaks} <br /> <br />
+              Body: {comment.body} <br /> User_id: {comment.user_id} <br />
+              Post_id: {comment.post_id} <br /> Comment_id: {comment.comment_id}
+              <br /> Upcroaks: {comment.upcroaks} <br /> Downcroaks:{" "}
+              {comment.downcroaks} <br /> <br />
             </div>
           );
         })}

@@ -5,6 +5,7 @@ import "./App.css";
 
 import Home from "./components/Home/Home.js";
 import User from "./components/User/User.js";
+import Users from "./components/User/Users.js";
 import Posts from "./components/Post/Posts.js";
 import Comment from "./components/Comment/Comment.js";
 import Login from "./components/Login/Login.js";
@@ -21,7 +22,8 @@ class App extends Component {
         {/* <div className="main-content">Stufffffff</div> */}
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/users" component={User} />
+          <Route exact path="/users" component={Users} />
+          <Route path="/users/:id" component={User} />
           <Route exact path="/posts" component={Posts} />
           <Route exact path="/comments" component={Comment} />
           <Route exact path="/login" component={Login} />

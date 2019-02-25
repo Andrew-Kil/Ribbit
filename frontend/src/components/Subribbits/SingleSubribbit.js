@@ -15,20 +15,16 @@ export default class SingleSubribbit extends React.Component {
 
   renderSubribbit = () => {
     const { id } = this.props.match.params;
-    console.log("id: ", id);
-    console.log(this.state.subribbits);
-
     const subribbit = this.state.subribbits.find(
       subribbit => subribbit.id === Number(id)
     );
-    console.log(subribbit);
     if (!subribbit) {
-      return <div> could not find subribbit </div>;
+      return <div> Could not find subribbit </div>;
     } else {
       return (
         <div>
-          name: {subribbit.name}, info: {subribbit.info}, subscribbitors:{" "}
-          {subribbit.subscribbitors}
+          Name: {subribbit.name} <br /> Info: {subribbit.info} <br />{" "}
+          Subscribbitors: {subribbit.subscribbitors}
         </div>
       );
     }

@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: rgb(23, 221, 23);
+  background-color: #016400;
   height: 80px;
   text-align: center;
   font-size: 40px;
@@ -26,6 +26,10 @@
   position: relative;
   padding-top: 20px;
 }
+
+/* .nav-links {
+  background-color: white;
+} */
 
 .logo {
   float: left;
@@ -116,6 +120,10 @@
 .commentsLink,
 .subribbitsLink {
   font-size: 20px;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
 .search-container:hover {

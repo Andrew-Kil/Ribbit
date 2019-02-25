@@ -20,7 +20,7 @@ export default class Subribbits extends Component {
     console.log("id: ", id);
     const subribbit = this.state.subribbits.getOne(id);
     if (!subribbit) {
-      return <div> could not find subribbit </div>;
+      return <div> Could not find subribbit </div>;
     } else {
       return (
         <SingleSubribbit
@@ -31,11 +31,6 @@ export default class Subribbits extends Component {
       );
     }
   };
-
-  //   renderPetList = () => {
-  //     const pets = petAPI.getAll();
-  //     return <PetList pets={pets} />;
-  //   };
 
   componentDidMount() {
     axios
@@ -54,12 +49,12 @@ export default class Subribbits extends Component {
         {this.state.subribbits.map(subribbit => {
           return (
             <div id={subribbit.id}>
-              Subribbits - name:
+              Name: {""}
               <a href={`http://localhost:3000/subribbits/${subribbit.id}`}>
                 {subribbit.name}
               </a>
-              <br /> Subribbits - info: {subribbit.info} <br /> Subribbits -
-              subscribbitors: {subribbit.subscribbitors} <br /> <br />
+              <br /> Info: {subribbit.info} <br /> Subscribbitors:{" "}
+              {subribbit.subscribbitors} <br /> <br />
             </div>
           );
         })}

@@ -15,12 +15,13 @@ export default class Post extends Component {
     return (
       <>
         <div className="postTitle">List of posts: </div>
+        <br />
         {this.state.posts.map(post => {
           return (
             <div>
-              Post - body: {post.body} <br /> Post - user_id: {post.user_id}{" "}
-              <br /> Post - upcroaks: {post.upcroaks} <br /> Post - downcroaks:{" "}
-              {post.downcroaks} <br /> <br />
+              Title: {post.title} <br />
+              Body: {post.body} <br /> User_id: {post.user_id} <br /> Upcroaks:{" "}
+              {post.upcroaks} <br /> Downcroaks: {post.downcroaks} <br /> <br />
             </div>
           );
         })}
