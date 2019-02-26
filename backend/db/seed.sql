@@ -7,9 +7,9 @@ CREATE TABLE users
 (
     id SERIAL PRIMARY KEY,
     username VARCHAR(20) UNIQUE NOT NULL,
-    password_digest VARCHAR(30) NOT NULL,
+    password_digest VARCHAR NOT NULL,
     email VARCHAR(40) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE subribbits
@@ -26,7 +26,7 @@ CREATE TABLE posts
     title VARCHAR(50) NOT NULL,
     body TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT
-CURRENT_TIMESTAMP NOT NULL,
+CURRENT_TIMESTAMP,
     user_id INT REFERENCES users(id) NOT NULL,
     sub_id INT REFERENCES subribbits(id) NOT NULL,
     upcroaks INT NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE comments
     id SERIAL PRIMARY KEY,
     body TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT
-CURRENT_TIMESTAMP NOT NULL,
+CURRENT_TIMESTAMP,
     user_id INT REFERENCES users(id) NOT NULL,
     post_id INT REFERENCES posts(id) NOT NULL,
     comment_id INT REFERENCES comments(id),

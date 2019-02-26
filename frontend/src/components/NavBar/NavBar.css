@@ -81,12 +81,13 @@
   font-size: 15px;
 }
 
-.login-signup {
+.login-logout-signup {
   width: 256px;
   height: 32px;
 }
 
 .login,
+.logout,
 .signup {
   width: 120px;
   height: 32px;
@@ -135,4 +136,5 @@
 
 .dark-mode {
   background-color: #030303;
+  color: white;
 }

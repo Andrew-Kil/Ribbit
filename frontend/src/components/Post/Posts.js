@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 // import Home from "../Home/Home.js";
 
@@ -19,15 +20,17 @@ export default class Posts extends Component {
       <>
         {/* <Home data={this.state} /> */}
 
-        <div className="postTitle">List of posts: </div>
         <br />
 
         {this.state.posts.map(post => {
           return (
             <div id={post.id}>
               Title: {post.title} <br />
-              Body: {post.body} <br /> User_id: {post.user_id} <br /> Upcroaks:{" "}
-              {post.upcroaks} <br /> Downcroaks: {post.downcroaks} <br /> <br />
+              Body: {post.body} <br />
+              {/* User_id: {post.user_id}  */}
+              <Link to={`/users/${post.user_id}`}>User Profile</Link>
+              <br /> Upcroaks: {post.upcroaks} <br /> Downcroaks:{" "}
+              {post.downcroaks} <br /> <br />
             </div>
           );
         })}

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 import "./NavBar.css";
+import Auth from "../../utils/Auth";
 
 import logo from "./ribbit-logo.png";
 import frog from "./frog.png";
@@ -11,7 +13,30 @@ import magnifying_glass from "./magnifying_glass.png";
 export default class NavBar extends Component {
   state = {
     searchInput: "",
-    darkMode: false
+    darkMode: false,
+    isLoggedIn: true,
+    user: ""
+  };
+
+  componentDidMount() {
+    this.checkAuthenticateStatus();
+  }
+
+  checkAuthenticateStatus = () => {
+    axios.get("/users/isLoggedIn").then(user => {
+      if (user.data.username === Auth.getToken()) {
+        this.setState({
+          isLoggedIn: Auth.isUserAuthenticated(),
+          username: Auth.getToken()
+        });
+      } else {
+        if (user.data.username) {
+          this.logoutUser();
+        } else {
+          Auth.deauthenticateUser();
+        }
+      }
+    });
   };
 
   handleChange = e => {
@@ -35,7 +60,27 @@ export default class NavBar extends Component {
       : document.body.classList.add("dark-mode");
   };
 
+  logoutUser = () => {
+    axios
+      .post("/users/logout")
+      .then(() => {
+        Auth.deauthenticateUser();
+      })
+      .then(() => {
+        this.checkAuthenticateStatus();
+      });
+
+    console.log("USER LOGGED OUT");
+  };
+
   render() {
+    const { isLoggedIn } = this.state;
+
+    let logoutButton = isLoggedIn ? (
+      <span>
+        <button onClick={this.logoutUser}>Logout</button>
+      </span>
+    ) : null;
     return (
       <nav className="navbar">
         <NavLink to={"/"}>
@@ -114,7 +159,7 @@ export default class NavBar extends Component {
           </NavLink>
         </div>
 
-        <div className="login-signup">
+        <div className="login-logout-signup">
           <NavLink to={"/login"}>
             <a
               href="https://www.reddit.com/login/?dest=https%3A%2F%2Fwww.reddit.com%2F"
@@ -124,6 +169,9 @@ export default class NavBar extends Component {
               Log-in
             </a>
           </NavLink>
+
+          {logoutButton}
+
           <NavLink to={"/signup"}>
             <a
               href="https://www.reddit.com/register/?dest=https%3A%2F%2Fwww.reddit.com%2F"

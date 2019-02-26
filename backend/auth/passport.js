@@ -1,7 +1,5 @@
 const passport = require("passport");
-const pgp = require("pg-promise")({});
-const connectionString = "postgres://localhost/userlist";
-const db = pgp(connectionString);
+const db = require("../db/queries/index.js");
 
 module.exports = () => {
   passport.serializeUser((user, done) => {

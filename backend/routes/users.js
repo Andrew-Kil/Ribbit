@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const passport = require("../auth/local");
+const { loginRequired } = require("../auth/helpers");
 
 const {
   getAllUsers,
@@ -8,7 +10,10 @@ const {
   getAllCommentsForAUser,
   updateUser,
   deleteUser,
-  createUser
+  createUser,
+  isLoggedIn,
+  loginUser,
+  logoutUser
 } = require("../db/queries/userQueries.js");
 
 router.get("/", getAllUsers);
@@ -17,6 +22,9 @@ router.get("/:id/posts", getAllPostsForAUser);
 router.get("/:id/comments", getAllCommentsForAUser);
 router.put("/:id", updateUser);
 router.delete("/:id", deleteUser);
-router.post("/", createUser);
+router.post("/new", createUser);
+router.post("/login", passport.authenticate("local", {}), loginUser);
+router.get("/isLoggedIn", isLoggedIn);
+router.post("/logout", loginRequired, logoutUser);
 
 module.exports = router;
