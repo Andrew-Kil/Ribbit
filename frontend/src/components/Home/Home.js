@@ -12,6 +12,7 @@ import frogvstoad from "./frogvstoad.png";
 
 export default class Home extends React.Component {
   render() {
+    // console.log(this.props);
     console.log(this.props);
     return (
       <div>
@@ -20,7 +21,7 @@ export default class Home extends React.Component {
           <div className="trending-container">
             <div className="trending-content-container">
               <div className="trending-content-1">
-                <a href="/lilypads">
+                <a href="/posts/5">
                   <div className="trending-content-box">
                     <img src={lilypad} alt="lilypad" className="lilypad" />
                     <h2 className="trending-content-box-text">Lilypads</h2>
@@ -71,7 +72,7 @@ export default class Home extends React.Component {
                 <span className="join-the-discussion-description">
                   Come for the frogs, stay for the dank memes.
                 </span>
-                <a class="become-a-ribbitor" href="/signup">
+                <a className="become-a-ribbitor" href="/signup">
                   Become a ribbitor
                 </a>
               </div>

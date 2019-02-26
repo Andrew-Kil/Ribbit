@@ -22,7 +22,7 @@ export default class User extends React.Component {
     } else {
       return (
         <div>
-          Name: {user.username} <br /> Password: {user.password_digest} <br />{" "}
+          Name: {user.username} <br />
           Email: {user.email} <br />
           Cake Day: {user.created_at} <br />
         </div>

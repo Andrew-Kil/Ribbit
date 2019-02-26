@@ -1,11 +1,33 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Signup.css";
 
 export default class Signup extends Component {
+  state = {
+    email: "",
+    emailVerified: false
+  };
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    if (this.state.email) {
+      this.setState({
+        emailVerified: true
+      });
+    }
+  };
+
   render() {
+    console.log(this.state);
     return (
       <div className="form-container">
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <h1 className="signup-title">Join the worldwide conversation.</h1>
           <p className="signup-description">
             By having a Ribbit account, you can subscribe, vote, and comment on
@@ -13,13 +35,18 @@ export default class Signup extends Component {
             Sign up in just seconds.
           </p>
           <fieldset className="email-fieldset">
-            <input type="email" name="email" className="signup-input-email" />
+            <input
+              type="email"
+              name="email"
+              className="signup-input-email"
+              onChange={this.handleChange}
+            />
             <label class="email-input-label">Email</label>
           </fieldset>
           <fieldset>
-            <button type="button" className="next-button">
+            <Link to="/signupInfo" className="next-button">
               NEXT
-            </button>
+            </Link>
           </fieldset>
           <div className="text-bottom">
             Already a Ribbitor? {""}

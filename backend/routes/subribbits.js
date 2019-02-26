@@ -4,6 +4,7 @@ const router = express.Router();
 const {
   getAllSubribbits,
   getSingleSubribbit,
+  getAllPostsForASubribbit,
   updateSubribbit,
   deleteSubribbit,
   createSubribbit
@@ -11,6 +12,7 @@ const {
 
 router.get("/", getAllSubribbits);
 router.get("/:id", getSingleSubribbit);
+router.get("/posts/:id", getAllPostsForASubribbit);
 router.put("/:id", updateSubribbit);
 router.delete("/:id", deleteSubribbit);
 router.post("/", createSubribbit);

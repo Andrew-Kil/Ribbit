@@ -24,13 +24,13 @@ export default class Posts extends Component {
 
         {this.state.posts.map(post => {
           return (
-            <div id={post.id}>
+            <div key={post.id}>
               Title: {post.title} <br />
               Body: {post.body} <br />
-              {/* User_id: {post.user_id}  */}
               <Link to={`/users/${post.user_id}`}>User Profile</Link>
-              <br /> Upcroaks: {post.upcroaks} <br /> Downcroaks:{" "}
-              {post.downcroaks} <br /> <br />
+              <br />
+              <Link to={`/subribbits/${post.sub_id}`}> Subribbit </Link>
+              <br /> <br />
             </div>
           );
         })}

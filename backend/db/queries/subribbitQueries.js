@@ -25,6 +25,22 @@ const getSingleSubribbit = (req, res, next) => {
     .catch(err => next(err));
 };
 
+const getAllPostsForASubribbit = (req, res, next) => {
+  let subId = parseInt(req.params.id);
+  db.any(
+    "SELECT posts.* FROM subribbits JOIN posts ON posts.sub_id = subribbits.id WHERE subribbits.id = $1",
+    [subId]
+  )
+    .then(data => {
+      res.status(200).json({
+        status: "Success",
+        data: data,
+        message: "All subribbit posts"
+      });
+    })
+    .catch(err => next(err));
+};
+
 const updateSubribbit = (req, res, next) => {
   db.none(
     "UPDATE subribbits SET name=${name}, info=${info}, subscribbitors=${subscribbitors} WHERE name=${name}",
@@ -72,6 +88,7 @@ const createSubribbit = (req, res, next) => {
 module.exports = {
   getAllSubribbits,
   getSingleSubribbit,
+  getAllPostsForASubribbit,
   updateSubribbit,
   deleteSubribbit,
   createSubribbit
