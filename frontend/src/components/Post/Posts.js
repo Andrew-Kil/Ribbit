@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import "./Posts.css";
+
 // import Home from "../Home/Home.js";
 
 export default class Posts extends Component {
@@ -24,14 +26,34 @@ export default class Posts extends Component {
 
         {this.state.posts.map(post => {
           return (
-            <div key={post.id}>
-              Title: {post.title} <br />
-              Body: {post.body} <br />
-              <Link to={`/users/${post.user_id}`}>User Profile</Link>
-              <br />
-              <Link to={`/subribbits/${post.sub_id}`}> Subribbit </Link>
-              <br /> <br />
-            </div>
+            <>
+              <div key={post.id} className="post-field">
+                <Link
+                  to={`/subribbits/posts/${post.sub_id}`}
+                  className="post-subribbit"
+                >
+                  r/{post.name}
+                </Link>
+                <Link to={`/users/${post.user_id}`} className="post-ribbitor">
+                  Posted by{" "}
+                  <span className="ribbitor-link">u/{post.username}</span>
+                </Link>
+                <span className="post-creation">{post.created_at}</span>
+                <br />
+                <br />
+                <Link to={`/posts/${post.id}`} className="post-title">
+                  {post.title}
+                </Link>{" "}
+                <br />
+                <br />
+                {post.body} <br />
+                <br /> <br />
+                <Link to={`/posts/${post.id}`} className="post-comments">
+                  Comments
+                </Link>
+              </div>
+              <div className="post-field-spacing" />
+            </>
           );
         })}
       </>

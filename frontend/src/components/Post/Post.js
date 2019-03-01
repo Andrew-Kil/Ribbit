@@ -15,6 +15,7 @@ export default class Post extends Component {
   getOne = id => this.state.posts.find(post => post.id === id);
 
   renderPost = () => {
+    console.log(this.props.posts);
     const { id } = this.props.match.params;
     const post = this.state.posts.find(post => post.id === Number(id));
     if (!post) {
@@ -41,6 +42,7 @@ export default class Post extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <>
         {this.renderPost()}

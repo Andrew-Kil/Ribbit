@@ -1,7 +1,9 @@
 const { db } = require("./index.js");
 
 const getAllPosts = (req, res, next) => {
-  db.any("SELECT * FROM posts")
+  db.any(
+    "SELECT posts.*, users.username, subribbits.name FROM posts JOIN users ON posts.user_id=users.id JOIN subribbits ON posts.sub_id=subribbits.id"
+  )
     .then(data => {
       res.status(200).json({
         status: "Success",
