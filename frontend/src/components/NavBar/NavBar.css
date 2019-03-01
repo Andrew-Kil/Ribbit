@@ -20,6 +20,15 @@
   height: 80px;
   text-align: center;
   font-size: 40px;
+
+  /* the code below allows the navbar to stick to the top of the page as the user scrolls */
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .navbar-form {
@@ -136,5 +145,4 @@
 
 .dark-mode {
   background-color: #030303;
-  color: white;
 }
