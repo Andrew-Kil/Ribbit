@@ -2,13 +2,13 @@ const { db } = require("./index.js");
 
 const getAllPosts = (req, res, next) => {
   db.any(
-    "SELECT posts.*, users.username, subribbits.name FROM posts JOIN users ON posts.user_id=users.id JOIN subribbits ON posts.sub_id=subribbits.id"
+    "SELECT posts.*, subribbits.name, subribbits.subscribbitors, users.username FROM posts JOIN subribbits ON posts.sub_id=subribbits.id JOIN users ON posts.user_id=users.id"
   )
     .then(data => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Received all posts"
+        message: "Received all posts info"
       });
     })
     .catch(err => next(err));
@@ -16,12 +16,15 @@ const getAllPosts = (req, res, next) => {
 
 const getSinglePost = (req, res, next) => {
   let postId = parseInt(req.params.id);
-  db.one("SELECT * FROM posts WHERE id=$1", postId)
+  db.any(
+    "SELECT posts.*, subribbits.name, subribbits.subscribbitors, users.username, comments.comment, comments.user_id FROM posts JOIN subribbits ON posts.sub_id=subribbits.id JOIN users ON posts.user_id=users.id JOIN comments ON posts.id=comments.post_id WHERE posts.id=$1",
+    postId
+  )
     .then(data => {
       res.status(200).json({
         status: "Success",
         data: data,
-        message: "Received one post"
+        message: "Received single post info"
       });
     })
     .catch(err => next(err));
@@ -56,7 +59,7 @@ const deletePost = (req, res, next) => {
 
 const createPost = (req, res, next) => {
   db.none(
-    "INSERT INTO posts(body, user_id, upcroaks, downcroaks) VALUES(${body}, ${user_id}, ${upcroaks}, ${downcroaks})",
+    "INSERT INTO posts(title, body, created_at, user_id, sub_id) VALUES(${title}, ${body}, ${created_at}, ${user_id}, ${sub_id})",
     req.body
   )
     .then(() => {

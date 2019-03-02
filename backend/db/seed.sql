@@ -33,7 +33,7 @@ CREATE TABLE posts
 CREATE TABLE comments
 (
     id SERIAL PRIMARY KEY,
-    body TEXT NOT NULL,
+    comment TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT
 CURRENT_TIMESTAMP,
     user_id INT REFERENCES users(id) NOT NULL,
@@ -91,7 +91,7 @@ VALUES
     ('Best Pond Pun', 'The names Pond... James Pond', '18 hours ago', 1, 3);
 
 INSERT INTO comments
-    (body, user_id, post_id, comment_id)
+    (comment, user_id, post_id, comment_id)
 VALUES
     ('great post, would comment again', 1, 2, null),
     ('I can jump 5 feet high', 2, 12, null),

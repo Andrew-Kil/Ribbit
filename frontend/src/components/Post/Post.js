@@ -22,18 +22,78 @@ export default class Post extends Component {
       return <div> Could not find post </div>;
     } else {
       return (
-        <div>
-          Title: {post.title} <br /> Body: {post.body} <br /> User:{" "}
-          {post.user_id} <br />
-          Subribbit: {post.sub_id} <br />
-        </div>
+        <>
+          <div className="post-field-spacing" />
+          <div className="post-field">
+            <Link
+              to={`/subribbits/posts/${post.sub_id}`}
+              className="post-subribbit"
+            >
+              r/{post.name}
+            </Link>
+            <Link to={`/users/${post.user_id}`} className="post-ribbitor">
+              Posted by <span className="ribbitor-link">u/{post.username}</span>
+            </Link>
+            <span className="post-creation">{post.created_at}</span>
+            <br />
+            <br />
+            <Link to={`/posts/${post.id}`} className="post-title">
+              {post.title}
+            </Link>{" "}
+            <br />
+            <br />
+            {post.body} <br />
+            <br /> <br />
+          </div>
+          <div className="post-field-spacing" />
+          <div className="post-field-spacing" />
+          {this.state.posts.map(post => {
+            return (
+              <>
+                <div key={post.id} className="post-field">
+                  <div>User ID: {post.user_id}</div>
+                  <div>{post.comment}</div>
+                </div>
+                {/* <div key={post.id} className="post-field">
+                  <Link
+                    to={`/subribbits/${post.sub_id}`}
+                    className="post-subribbit"
+                  >
+                    r/{post.name}
+                  </Link>
+                  <Link to={`/users/${post.user_id}`} className="post-ribbitor">
+                    Posted by{" "}
+                    <span className="ribbitor-link">u/{post.username}</span>
+                  </Link>
+                  <span className="post-creation">{post.created_at}</span>
+                  <br />
+                  <br />
+                  <Link to={`/posts/${post.id}`} className="post-title">
+                    {post.title}
+                  </Link>{" "}
+                  <br />
+                  <br />
+                  {post.body} <br />
+                  <br /> <br />
+                  <Link to={`/posts/${post.id}`} className="post-comments">
+                    Comments
+                  </Link>
+                </div> */}
+                <div className="post-field-spacing" />
+              </>
+            );
+          })}
+        </>
       );
     }
   };
 
   componentDidMount() {
+    const id = Number(this.props.match.params.id);
+    console.log(id);
+
     axios
-      .get("/posts")
+      .get(`/posts/${id}`)
       .then(res => {
         this.setState({ posts: res.data.data });
       })
