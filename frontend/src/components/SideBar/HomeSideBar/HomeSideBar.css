@@ -23,10 +23,15 @@
 }
 
 .home-side-bar-banner {
-  height: 34px;
+  /* height: 34px;
   width: 100%;
   background: url(./home-banner.png) center center / cover no-repeat
-    rgb(0, 121, 211);
+    rgb(0, 121, 211); */
+  height: 34px;
+  background: url(https://www.redditstatic.com/desktop2x/img/id-cards/banner@2x.png)
+    center center / cover no-repeat rgb(0, 121, 211);
+  border-radius: 4px 4px 0px 0px;
+  margin: -12px -12px 10px;
 }
 
 .home-side-bar-frog {
@@ -44,7 +49,6 @@
 .home-side-bar-home-text {
   margin-left: 50px;
   font-size: 20px;
-
 }
 
 .home-side-bar-body-text {

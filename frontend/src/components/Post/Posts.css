@@ -1,0 +1,42 @@
+.post-field {
+  border: 1px solid rgb(135, 138, 140);
+  border-radius: 5px;
+  background-color: white;
+  max-width: 600px;
+}
+
+.post-field-spacing {
+  height: 20px;
+}
+
+.post-title {
+  color: rgb(26, 26, 27);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  padding-right: 5px;
+}
+
+.post-subribbit {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(28, 28, 28);
+  line-height: 20px;
+}
+
+.post-ribbitor,
+.post-creation {
+  color: rgb(120, 124, 126);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding-left: 20px;
+}
+
+.post-ribbitor:hover {
+  text-decoration: none;
+}
+
+.post-ribbitor:hover .ribbitor-link {
+  text-decoration: underline;
+}

@@ -49,7 +49,7 @@ export default class Users extends Component {
         <br />
         {this.state.users.map(user => {
           return (
-            <div id={user.id}>
+            <div key={user.id}>
               Username: {""}
               <Link to={`/users/${user.id}`}>{user.username}</Link>
               <br />

@@ -28,7 +28,7 @@ const getSingleSubribbit = (req, res, next) => {
 const getAllPostsForASubribbit = (req, res, next) => {
   let subId = parseInt(req.params.id);
   db.any(
-    "SELECT posts.* FROM subribbits JOIN posts ON posts.sub_id = subribbits.id WHERE subribbits.id = $1",
+    "SELECT posts.*, users.username, subribbits.name FROM posts JOIN users ON posts.user_id=users.id JOIN subribbits ON posts.sub_id=subribbits.id WHERE subribbits.id = $1",
     [subId]
   )
     .then(data => {

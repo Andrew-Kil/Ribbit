@@ -161,25 +161,13 @@ export default class NavBar extends Component {
 
         <div className="login-logout-signup">
           <NavLink to={"/login"}>
-            <a
-              href="https://www.reddit.com/login/?dest=https%3A%2F%2Fwww.reddit.com%2F"
-              alt="log-in"
-              className="login"
-            >
-              Log-in
-            </a>
+            <span className="login">Log-in</span>
           </NavLink>
 
-          {logoutButton}
+          {/* {logoutButton} */}
 
           <NavLink to={"/signup"}>
-            <a
-              href="https://www.reddit.com/register/?dest=https%3A%2F%2Fwww.reddit.com%2F"
-              alt="sign-up"
-              className="signup"
-            >
-              Sign Up
-            </a>
+            <span className="signup">Sign Up</span>
           </NavLink>
         </div>
       </nav>

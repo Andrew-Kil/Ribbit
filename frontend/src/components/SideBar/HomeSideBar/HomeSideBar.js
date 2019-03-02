@@ -10,24 +10,16 @@ export default function HomeSideBar() {
           <div className="home-side-bar-banner" />
           <div className="home-side-bar-body">
             <div className="home-side-bar-frog">
-              <div className="home-side-bar-home-text">Home</div>
+              <div className="home-side-bar-home-text">r/popular</div>
             </div>
             <div className="home-side-bar-body-text">
-              Your personal Ribbit frontpage. Come here to check in with your
-              favorite communities.
+              The best posts on Ribbit for you, pulled from the most active
+              communities on Reddit. Check here to see the most shared, upvoted,
+              and commented content on the internet.
             </div>
             <div className="home-side-bar-buttons">
-              <a
-                className="home-side-bar-create-post-button"
-                href="/create-post"
-              >
+              <a className="home-side-bar-create-post-button" href="/signup">
                 Create Post
-              </a>
-              <a
-                className="home-side-bar-create-community-button"
-                href="/create-community"
-              >
-                Create Community
               </a>
             </div>
           </div>
