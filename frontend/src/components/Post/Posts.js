@@ -26,8 +26,13 @@ export default class Posts extends Component {
 
         {this.state.posts.map(post => {
           return (
+<<<<<<< HEAD
             <div key={post.id}>
               <div className="post-field">
+=======
+            <>
+              <div key={post.id} className="post-field">
+>>>>>>> 3129d9102c0dad51bb9ac9065053b128427ea110
                 <Link
                   to={`/subribbits/posts/${post.sub_id}`}
                   className="post-subribbit"
@@ -53,7 +58,11 @@ export default class Posts extends Component {
                 </Link>
               </div>
               <div className="post-field-spacing" />
+<<<<<<< HEAD
             </div>
+=======
+            </>
+>>>>>>> 3129d9102c0dad51bb9ac9065053b128427ea110
           );
         })}
       </>

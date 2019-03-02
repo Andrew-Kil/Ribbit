@@ -76,6 +76,7 @@ VALUES
 INSERT INTO posts
     (title, body, created_at, user_id, sub_id)
 VALUES
+<<<<<<< HEAD
 
     ('What did the chinese food restaurant name their band?', 'Wok n Roll', '2 days ago', 7, 1),
     ('Important question', 'How much wood could a woodchuck chuck if a woodchuck couldnt chuck wood?', '1 day ago', 3, 2),
@@ -191,6 +192,39 @@ VALUES
     (-1, 5, 13, null),
     (1, 6, 13, null),
 
+=======
+    ('Punny title', 'Halo, water you dewing right meow?', '10 minutes ago', 2, 1),
+    ('What did the chinese food restaurant name their band?', 'Wok n Roll', 7, 1),
+    ('Favorite tea?', 'As the title says, what is your favorite type of tea?', '9 hours ago', 1, 2),
+    ('Important question', 'How much wood could a woodchuck chuck if a woodchuck couldnt chuck wood?', '1 day ago', 3, 2),
+    ('To all frogs & toads...', 'How high can you jump?', '1 hour ago', 2, 2),
+    ('Insert title here', 'Insert pond picture here', 'a week ago', 3, 3),
+    ('Breaking News!', 'Baracka Flaka Obama challenges Donald Drumpf to engage in fisticuffs!!!', '1 minute ago', 7, 4),
+    ('BEST FILMS OF THE DECADE', 'Bee Movie, A Bugs Life, Shrek, The Princess and the Frog, Frog Kingdom', '11 hours ago', 4, 5),
+    ('LeBron: King or Joker?', 'Is LeBron James a king or is he a joker?', 5, 6),
+    ('Kimchi fried rice recipe', 'Do you have any links to recipes for kimchi fried rice?', 'just now', 5, 7),
+    ('Meditation Routine?', 'Does anyone have a daily/weekly meditation routine that they want to share?', '22 hours ago', 6, 8)
+
+INSERT INTO comments
+    (body, user_id, post_id, comment_id)
+VALUES
+    ('great post, would comment again', 1, 2, null),
+    ('I can jump 5 feet high', 2, 3, null),
+    ('green tea', 3, 1, null),
+    ('your comment is trash and so are you', 2, 2, 1),
+    ('I can jump 6 feet high', 4, 3, 2),
+    ('$1000 on Baracka', 1, 7, null),
+    ('No way jose, my moneys on Drumpf', 6, 7, 7),
+    ('What about Shrek 2?!', 5, 6, null),
+    ('Why yes, it was a splendid movie', 7, 6, 8),
+    ('My favorite recipe is from Maangchi. You can find her on youtube or buy her book :)', 6, 7, null),
+    ('Yes that is also my favorite recipe! Lettuce meat and be friends', 7, 7, 10),
+    ('My meditation is as follows: I have no meditation routine.', 4, 8, null);
+
+INSERT INTO croaks
+    (croak_value, croaker_id, post_id, comment_id)
+VALUES
+>>>>>>> 3129d9102c0dad51bb9ac9065053b128427ea110
     (1, 1, null, 1),
     (1, 2, null, 1),
     (-1, 4, null, 1),
@@ -212,7 +246,11 @@ VALUES
     (-1, 4, null, 4),
     (-1, 5, null, 4),
     (-1, 6, null, 4),
+<<<<<<< HEAD
     (-1, 7, null, 4);
 
+=======
+    (-1, 7, null, 4)
+>>>>>>> 3129d9102c0dad51bb9ac9065053b128427ea110
 
 
