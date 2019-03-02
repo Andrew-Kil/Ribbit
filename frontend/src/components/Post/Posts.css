@@ -5,6 +5,10 @@
   max-width: 600px;
 }
 
+.voting-field {
+  border-left: 4px solid transparent;
+}
+
 .post-field-spacing {
   height: 20px;
 }

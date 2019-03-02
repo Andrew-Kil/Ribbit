@@ -81,6 +81,21 @@
   margin-top: 10px;
 }
 
+.user-dropdown {
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+.user-profile-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.down-arrow {
+  width: 20px;
+  height: 20px;
+}
+
 .user-profile-button {
   border-radius: 5px;
 }

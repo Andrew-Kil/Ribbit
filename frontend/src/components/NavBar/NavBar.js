@@ -4,6 +4,8 @@ import axios from "axios";
 import "./NavBar.css";
 import Auth from "../../utils/Auth";
 
+import user_profile from "./user-profile.png";
+import down_arrow from "./down-arrow.png";
 import logo from "./ribbit-logo.png";
 import frog from "./frog.png";
 import magnifying_glass from "./magnifying_glass.png";
@@ -144,20 +146,6 @@ export default class NavBar extends Component {
             </button>
           </div>
         </NavLink> */}
-        <div>
-          <NavLink to={"/users"}>
-            <span className="usersLink">Users</span>
-          </NavLink>
-          <NavLink to={"/posts"}>
-            <span className="postsLink">Posts</span>
-          </NavLink>
-          <NavLink to={"/comments"}>
-            <span className="commentsLink">Comments</span>
-          </NavLink>
-          <NavLink to={"/subribbits"}>
-            <span className="subribbitsLink">Subribbits</span>
-          </NavLink>
-        </div>
 
         <div className="login-logout-signup">
           <NavLink to={"/login"}>
@@ -169,6 +157,22 @@ export default class NavBar extends Component {
           <NavLink to={"/signup"}>
             <span className="signup">Sign Up</span>
           </NavLink>
+        </div>
+        <div className="user-dropdown">
+          <button>
+            <div className="icon-container">
+              <img
+                src={user_profile}
+                alt="user profile icon"
+                className="user-profile-icon"
+              />
+              <img
+                src={down_arrow}
+                alt="down arrow icon"
+                className="down-arrow"
+              />
+            </div>
+          </button>
         </div>
       </nav>
     );

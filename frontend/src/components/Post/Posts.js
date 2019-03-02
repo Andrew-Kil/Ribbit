@@ -26,7 +26,11 @@ export default class Posts extends Component {
 
         {this.state.posts.map(post => {
           return (
-            <div key={post.id}>
+            <div key={post.id} className="post-container">
+              <div className="voting-field">
+                <button>Up</button>
+                <button>Down</button>
+              </div>
               <div className="post-field">
                 <Link
                   to={`/subribbits/posts/${post.sub_id}`}
