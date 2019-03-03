@@ -89,16 +89,18 @@ export default class Post extends Component {
   };
 
   componentDidMount() {
-    const id = Number(this.props.match.params.id);
-    console.log(id);
+    this.getPost();
+    this.renderPost();
+  }
 
+  getPost() {
+    const id = Number(this.props.match.params.id);
     axios
       .get(`/posts/${id}`)
       .then(res => {
         this.setState({ posts: res.data.data });
       })
       .catch(err => console.log(err));
-    this.renderPost();
   }
 
   render() {

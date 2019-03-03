@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./Posts.css";
 
+import chat_icon from "./chat-icon.png";
+
 // import Home from "../Home/Home.js";
 
 export default class Posts extends Component {
@@ -53,6 +55,7 @@ export default class Posts extends Component {
                 {post.body} <br />
                 <br /> <br />
                 <Link to={`/posts/${post.id}`} className="post-comments">
+                  <img src={chat_icon} alt="chat icon" className="chat-icon" />
                   Comments
                 </Link>
               </div>

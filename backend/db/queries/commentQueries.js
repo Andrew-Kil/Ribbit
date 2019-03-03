@@ -1,7 +1,11 @@
 const { db } = require("./index.js");
 
-const getAllComments = (req, res, next) => {
-  db.any("SELECT * FROM comments")
+const getAllCommentsForPost = (req, res, next) => {
+  let postId = parseInt(req.params.id);
+  db.any(
+    "SELECT comments.*, users.*, posts.* FROM comments JOIN users ON comments.user_id=users.id JOIN posts ON comments.post_id=posts.id WHERE posts.id = $1",
+    [postId]
+  )
     .then(data => {
       res.status(200).json({
         status: "Success",
@@ -67,7 +71,7 @@ const createComment = (req, res, next) => {
 };
 
 module.exports = {
-  getAllComments,
+  getAllCommentsForPost,
   getSingleComment,
   updateComment,
   deleteComment,

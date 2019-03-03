@@ -52,3 +52,9 @@
 .post-ribbitor:hover .ribbitor-link {
   text-decoration: underline;
 }
+
+.chat-icon {
+  width: 20px;
+  height: 18px;
+  padding-right: 10px;
+}
