@@ -1,11 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Home.css";
 import HomeSideBar from "../SideBar/HomeSideBar/HomeSideBar.js";
 import AdSideBar from "../SideBar/AdSideBar/AdSideBar.js";
 
 import Posts from "../Post/Posts.js";
 
+import trending from "./trending.png";
 import lilypad from "./lilypad.png";
 import pond from "./pond.png";
 import frog from "./frog.jpg";
@@ -17,20 +17,6 @@ export default class Home extends React.Component {
     console.log(this.props);
     return (
       <div>
-        <div className="routes">
-          <NavLink to={"/users"}>
-            <span className="usersLink">Users</span>
-          </NavLink>
-          <NavLink to={"/posts"}>
-            <span className="postsLink">Posts</span>
-          </NavLink>
-          <NavLink to={"/comments"}>
-            <span className="commentsLink">Comments</span>
-          </NavLink>
-          <NavLink to={"/subribbits"}>
-            <span className="subribbitsLink">Subribbits</span>
-          </NavLink>
-        </div>
         <div className="body-container">
           <div className="trending-today">Trending today</div>
           <div className="trending-container">
@@ -38,40 +24,36 @@ export default class Home extends React.Component {
               <div className="trending-content-1">
                 <a href="/posts/5">
                   <div className="trending-content-box">
-                    <img src={lilypad} alt="lilypad" className="lilypad" />
-                    <h2 className="trending-content-box-text">Lilypads</h2>
+                    <img src={trending} alt="trending" className="trending" />
+                    <h4 className="trending-content-box-text">Lilypads</h4>
                   </div>
                 </a>
               </div>
               <div className="trending-content-2">
                 <a href="/pondpics">
                   <div className="trending-content-box">
-                    <img src={pond} alt="pond" className="pond" />
-                    <h2 className="trending-content-box-text">Pond pictures</h2>
+                    <img src={trending} alt="trending" className="trending" />
+                    <h4 className="trending-content-box-text">Pond pictures</h4>
                   </div>
                 </a>
               </div>
               <div className="trending-content-3">
                 <a href="/whatthefrog">
                   <div className="trending-content-box">
-                    <img src={frog} alt="frog" className="kingfrog" />
-                    <h2 className="trending-content-box-text">
+                    <img src={trending} alt="trending" className="trending" />
+                    <h4 className="trending-content-box-text">
                       What the frog?
-                    </h2>
+                    </h4>
                   </div>
                 </a>
               </div>
               <div className="trending-content-4">
                 <a href="/frogvstoad">
                   <div className="trending-content-box">
-                    <img
-                      src={frogvstoad}
-                      alt="frogvstoad"
-                      className="frogvstoad"
-                    />
-                    <h2 className="trending-content-box-text">
+                    <img src={trending} alt="trending" className="trending" />
+                    <h4 className="trending-content-box-text">
                       Frogs vs Toads
-                    </h2>
+                    </h4>
                   </div>
                 </a>
               </div>

@@ -139,17 +139,6 @@
   margin-left: 12px;
 }
 
-.usersLink,
-.postsLink,
-.commentsLink,
-.subribbitsLink {
-  font-size: 20px;
-  background-color: white;
-  border: 3px solid black;
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
 .search-container:hover {
   background-color: rgb(255, 255, 255);
   border-width: 1px;
@@ -160,4 +149,20 @@
 
 .dark-mode {
   background-color: #030303;
+}
+
+.show {
+  display: block;
+}
+
+.nav-dropdown-menu {
+  border: 1px solid darkslategray;
+  border-radius: 5px;
+  background: #016400;
+}
+
+.nav-dropdown-menu:hover {
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #016400;
 }

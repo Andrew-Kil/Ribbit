@@ -28,7 +28,7 @@
   background: url(./home-banner.png) center center / cover no-repeat
     rgb(0, 121, 211); */
   height: 34px;
-  background: url(https://www.redditstatic.com/desktop2x/img/id-cards/banner@2x.png)
+  background: url(https://png.pngtree.com/thumb_back/fw800/back_pic/05/15/94/2859b01f0483b2b.jpg)
     center center / cover no-repeat rgb(0, 121, 211);
   border-radius: 4px 4px 0px 0px;
   margin: -12px -12px 10px;
@@ -37,17 +37,18 @@
 .home-side-bar-frog {
   height: 68px;
   position: relative;
-  width: 40px;
+  width: 80px;
   /* height: 25%;
   width: 25%; */
-  background: url(./home-frog.png) center center / cover no-repeat;
+  background: url(./home-frog.jpeg) center center / cover no-repeat;
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 1em;
 }
 
 .home-side-bar-home-text {
-  margin-left: 50px;
+  padding-left: 50px;
+  margin-left: 100px;
   font-size: 20px;
 }
 
@@ -73,7 +74,7 @@
   border-image: initial;
   border-radius: 4px;
   text-decoration: none;
-  padding: 3px 16px;
+  padding: 0 16px;
   border-color: rgb(0, 121, 211);
 }
 

@@ -97,13 +97,13 @@
 }
 
 .join-the-discussion {
-  background-color: rgb(3, 46, 94);
+  background-color: #cdeaf8;
   background-size: contain;
   position: relative;
-  width: 500px;
+  width: 555px;
   margin-bottom: 8px;
-  background-image: url(https://www.redditstatic.com/desktop2x/img/banner/banner-welcome@2x.png);
-  background-position: right center;
+  background-image: url(https://static1.squarespace.com/static/568dba38d8af10a744a7e112/t/576c2eafb8a79bcb10fd20ef/1466707951681/website+banner+2jpg?format=1500w);
+  background-position: right;
   background-repeat: no-repeat;
   border-radius: 4px;
   padding: 16px;
@@ -111,7 +111,7 @@
 
 .join-the-discussion-title {
   line-height: 26px;
-  color: rgb(255, 255, 255);
+  color: #431888;
   font-size: 32px;
   font-weight: bold;
 }
@@ -121,7 +121,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  color: rgb(255, 255, 255);
+  color: #431888;
   display: block;
   padding-top: 4px;
 }

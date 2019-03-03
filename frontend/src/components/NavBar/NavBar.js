@@ -17,7 +17,8 @@ export default class NavBar extends Component {
     searchInput: "",
     darkMode: false,
     isLoggedIn: true,
-    user: ""
+    user: "",
+    dropdownClicked: false
   };
 
   componentDidMount() {
@@ -60,6 +61,19 @@ export default class NavBar extends Component {
     darkModeState
       ? document.body.classList.remove("dark-mode")
       : document.body.classList.add("dark-mode");
+  };
+
+  toggleDropDown = () => {
+    const dropDownClicked = this.state.dropdownClicked;
+    this.setState({
+      dropdownClicked: !dropDownClicked
+    });
+    if (dropDownClicked) {
+      document.body.classList.add("show");
+    } else {
+      document.body.classList.remove("show");
+    }
+    console.log("clicked!");
   };
 
   logoutUser = () => {
@@ -159,7 +173,7 @@ export default class NavBar extends Component {
           </NavLink>
         </div>
         <div className="user-dropdown">
-          <button>
+          <button className="nav-dropdown-menu" onClick={this.toggleDropDown}>
             <div className="icon-container">
               <img
                 src={user_profile}
@@ -173,6 +187,13 @@ export default class NavBar extends Component {
               />
             </div>
           </button>
+          <div className="dropdown-content">
+            {/* <NavLink to={"/ribbit-coins"}>Reddit Coins</NavLink>
+            <NavLink to={"/ribbit-premium"}>Reddit Premium</NavLink>
+            <NavLink to={"/help-center"}>Help Center</NavLink>
+            <NavLink to={"/old-ribbit"}>Visit Old Ribbit</NavLink> */}
+            {/* <div>hi</div> */}
+          </div>
         </div>
       </nav>
     );

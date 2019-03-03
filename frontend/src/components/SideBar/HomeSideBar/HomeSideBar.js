@@ -10,7 +10,7 @@ export default function HomeSideBar() {
           <div className="home-side-bar-banner" />
           <div className="home-side-bar-body">
             <div className="home-side-bar-frog">
-              <div className="home-side-bar-home-text">r/popular</div>
+              <span className="home-side-bar-home-text">r/popular</span>
             </div>
             <div className="home-side-bar-body-text">
               The best posts on Ribbit for you, pulled from the most active

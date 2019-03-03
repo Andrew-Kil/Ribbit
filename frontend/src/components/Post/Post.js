@@ -106,7 +106,7 @@ export default class Post extends Component {
     return (
       <>
         {this.renderPost()}
-        <Link to="/posts">Back to posts</Link>
+        <Link to="/">Back to homepage</Link>
       </>
     );
   }
