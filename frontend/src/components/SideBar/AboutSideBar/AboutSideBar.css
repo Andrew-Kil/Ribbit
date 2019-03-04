@@ -9,7 +9,7 @@
   background-color: white;
 }
 
-.about-side-bar-padding {
+.about-side-bar-container {
   /* border: 5px black solid;
   margin: 0;
   padding: 0;
@@ -20,16 +20,6 @@
   height: 229px;
   width: 300px; */
   padding: 12px;
-}
-
-.home-side-bar-home-text {
-  margin-left: 50px;
-  font-size: 20px;
-}
-
-.home-side-bar-body-text {
-  font-size: 15px;
-  margin-bottom: 1em;
 }
 
 .home-side-bar-get-premium {
@@ -53,10 +43,39 @@
   border-color: rgb(0, 121, 211);
 }
 
-.route-links {
+/* .route-links {
   font-size: 14px;
   background-color: white;
   border: 1px solid black;
   border-radius: 2px;
   margin-left: 10px;
+} */
+
+.about-side-bar-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-side-bar-column-one,
+.about-side-bar-column-two,
+.about-side-bar-column-three {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.about-nav-links {
+  color: black;
+}
+
+.about-bottom-section {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+
+  display: flex;
+  justify-content: space-around
 }
