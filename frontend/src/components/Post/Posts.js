@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import "./Posts.css";
 
 import chat_icon from "./chat-icon.png";
+import up_arrow from "./up-arrow.png";
+import down_arrow from "./down-arrow.png";
 
 // import Home from "../Home/Home.js";
 
@@ -34,8 +36,17 @@ export default class Posts extends Component {
           return (
             <div key={post.id} className="post-container">
               <div className="voting-field">
-                <button>Up</button>
-                <button>Down</button>
+                <button className="croak-button">
+                  <img src={up_arrow} alt="upvote arrow" className="upcroak" />
+                </button>
+                0
+                <button className="croak-button">
+                  <img
+                    src={down_arrow}
+                    alt="downvote arrow"
+                    className="downcroak"
+                  />
+                </button>
               </div>
               <div className="post-field">
                 <Link

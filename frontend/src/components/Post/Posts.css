@@ -44,8 +44,8 @@
 
 .post-title {
   color: rgb(26, 26, 27);
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 24px;
   padding-right: 5px;
 }
@@ -82,4 +82,21 @@
   width: 20px;
   height: 18px;
   padding-right: 10px;
+}
+
+.croak-button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.upcroak,
+.downcroak {
+  width: 20px;
+  height: 20px;
+}
+
+.upcroak:hover,
+.downcroak:hover {
+  border: 1px solid green;
 }
