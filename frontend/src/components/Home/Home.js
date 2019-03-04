@@ -22,37 +22,37 @@ export default class Home extends React.Component {
           <div className="trending-container">
             <div className="trending-content-container">
               <div className="trending-content-1">
-                <a href="/posts/5">
+                <a href="/posts/9">
                   <div className="trending-content-box">
                     <img src={trending} alt="trending" className="trending" />
-                    <h4 className="trending-content-box-text">Lilypads</h4>
+                    <h4 className="trending-content-box-text">Meditation</h4>
                   </div>
                 </a>
               </div>
               <div className="trending-content-2">
-                <a href="/pondpics">
-                  <div className="trending-content-box">
-                    <img src={trending} alt="trending" className="trending" />
-                    <h4 className="trending-content-box-text">Pond pictures</h4>
-                  </div>
-                </a>
-              </div>
-              <div className="trending-content-3">
-                <a href="/whatthefrog">
+                <a href="/posts/5">
                   <div className="trending-content-box">
                     <img src={trending} alt="trending" className="trending" />
                     <h4 className="trending-content-box-text">
-                      What the frog?
+                      BEST FILMS OF THE DECADE
                     </h4>
                   </div>
                 </a>
               </div>
+              <div className="trending-content-3">
+                <a href="/posts/7">
+                  <div className="trending-content-box">
+                    <img src={trending} alt="trending" className="trending" />
+                    <h4 className="trending-content-box-text">LeBron James</h4>
+                  </div>
+                </a>
+              </div>
               <div className="trending-content-4">
-                <a href="/frogvstoad">
+                <a href="/posts/4">
                   <div className="trending-content-box">
                     <img src={trending} alt="trending" className="trending" />
                     <h4 className="trending-content-box-text">
-                      Frogs vs Toads
+                      Breaking News!
                     </h4>
                   </div>
                 </a>
@@ -72,7 +72,7 @@ export default class Home extends React.Component {
                 </a>
               </div>
               <div className="popular-posts">Popular posts</div>
-
+              <br />
               <div className="post-container">
                 <Posts />
                 {/* {this.props.data.posts.map(post => {

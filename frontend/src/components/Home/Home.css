@@ -55,10 +55,11 @@
   font-weight: 500;
   line-height: 22px;
   margin-top: 110px;
+  color: #016400;
 }
 
 .trending-today {
-  margin-left: 140px;
+  margin-left: 115px;
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
@@ -100,7 +101,7 @@
   background-color: #cdeaf8;
   background-size: contain;
   position: relative;
-  width: 555px;
+  width: 588px;
   margin-bottom: 8px;
   background-image: url(https://static1.squarespace.com/static/568dba38d8af10a744a7e112/t/576c2eafb8a79bcb10fd20ef/1466707951681/website+banner+2jpg?format=1500w);
   background-position: right;

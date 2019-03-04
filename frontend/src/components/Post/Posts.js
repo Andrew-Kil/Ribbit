@@ -63,7 +63,6 @@ export default class Posts extends Component {
                   Comments
                 </Link>
               </div>
-              <div className="post-field-spacing" />
             </div>
           );
         })}
