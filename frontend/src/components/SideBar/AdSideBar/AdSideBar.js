@@ -10,9 +10,7 @@ export default function AdSideBar() {
       <div className="ad-side-bar">
         <div className="ad-side-bar-padding">
           <div className="ad-side-bar-body">
-            <div className="ad-side-bar-body-header">
-              Brought to you by: GEICO{" "}
-            </div>
+            <div className="ad-side-bar-body-header">ADVERTISEMENT</div>
             <br />
             <img src={ad} alt="geico ad" className="ad" />
           </div>

@@ -18,7 +18,10 @@ export default function HomeSideBar() {
               and commented content on the internet.
             </div>
             <div className="home-side-bar-buttons">
-              <a className="home-side-bar-create-post-button" href="/signup">
+              <a
+                className="home-side-bar-create-post-button"
+                href="/posts/create"
+              >
                 Create Post
               </a>
             </div>

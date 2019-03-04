@@ -59,7 +59,10 @@ VALUES
     ('homer_simpson', 'duffbeer4lyfe', 'homer@simpson'),
     ('clairebear841', 'bearygoodpassword1234', 'claire@gmail.com'),
     ('ed_edd_eddy', 'derp101', 'edEddEddy@ed.edu'),
-    ('samIAm', 'kjewknfdsalei482794', 'sam@samMail.com');
+    ('samIAm', 'kjewknfdsalei482794', 'sam@samMail.com'),
+    ('dannyDevito', 'frankreynolds12345', 'dannyD@IASIP.com'),
+    ('froakie', 'fRoGpOwEr395', 'frog@frogmail.com'),
+    ('violetK', 'violentViolet58', 'violet@yahoo.com');
 
 INSERT INTO subribbits
     (name, info, subscribbitors)
@@ -71,7 +74,9 @@ VALUES
     ('moo-vies', 'Everything from blockbusters to indie films', 11111),
     ('sports', 'The best sports subribbit in all of ribbit.com', 840192),
     ('cooking', 'Post recipes, videos, etc', 938),
-    ('healthyHabits', 'Anything related to implementing healthy habits into your life', 8888);
+    ('healthyHabits', 'Anything related to implementing healthy habits into your life', 8888),
+    ('learnprogramming', 'A subribbit for all questions related to programming in any language', 897000),
+    ('dankmemes', 'A pLaCe To PoSt ThE dAnKeSt MeMeS', 42069);
 
 INSERT INTO posts
     (title, body, created_at, user_id, sub_id)
@@ -88,7 +93,10 @@ VALUES
     ('Punny title', 'Halo, water you dewing right meow?', '10 minutes ago', 2, 1),
     ('Queen Elizardbeth II', 'Human or Lizard?', '3 weeks ago', 7, 4),
     ('To all frogs & toads...', 'How high can you jump?', '1 hour ago', 2, 2),
-    ('Best Pond Pun', 'The names Pond... James Pond', '18 hours ago', 1, 3);
+    ('Best Pond Pun', 'The names Pond... James Pond', '18 hours ago', 1, 3),
+    ('Question about recursion', 'Write a function called sumRange. It will take a number and return the sum of all numbers from 1 up to the number passed in. Sample: sumRange(3) returns 6, since 1 + 2 + 3 = 6.', '30 seconds ago', 8, 9),
+    ('Proud as can be', 'https://i.redd.it/5kdu8qhyb3k21.jpg', '2 months ago', 9, 10),
+    ('How much exercise per week', 'Hi, I wanted to know how many times you guys exercise per week', '51 minutes ago', 10, 8);
 
 INSERT INTO comments
     (comment, user_id, post_id, comment_id)
@@ -112,7 +120,21 @@ VALUES
     ('That was funny... but now I am craving beef and broccoli', 4, 1, null),
     ('If you call right now you can still make it in time for the lunch special!', 7, 1, 17),
     ('Definitely Lizard', 2, 13, null),
-    ('Human!', 6, 13, null);
+    ('Human!', 6, 13, null),
+    ('var output = sumRange(3)
+console.log(output);
+
+function sumRange(num){
+	if(num == 1) return 1;
+
+	return num + sumRange(num - 1);
+}', 8, 14, null),
+    ('great answer!', 9, 14, 21),
+    ('that meme is so dank that it stanks', 10, 15, null),
+    ('you need to step up your meme game', 2, 15, null),
+    ('a lift my spoon 3 times a day, 7 days a week, if that counts...', 9, 16, null),
+    ('lol', 8, 16, 25),
+    ('i run twice a day, 4-5 times a week', 10, 16, null);
 
 INSERT INTO croaks
     (croak_value, croaker_id, post_id, comment_id)
@@ -212,6 +234,3 @@ VALUES
     (-1, 5, null, 4),
     (-1, 6, null, 4),
     (-1, 7, null, 4);
-
-
-
