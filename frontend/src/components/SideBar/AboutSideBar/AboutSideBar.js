@@ -18,7 +18,7 @@ export default function AboutSideBar() {
             </div>
             <br />
             Routes:
-            <div className="routes">
+            {/* <div className="routes">
               <NavLink to={"/users"}>
                 <span className="route-links">Users</span>
               </NavLink>
@@ -31,7 +31,7 @@ export default function AboutSideBar() {
               <NavLink to={"/subribbits"}>
                 <span className="route-links">Subribbits</span>
               </NavLink>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

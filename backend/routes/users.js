@@ -25,7 +25,6 @@ router.delete("/:id", deleteUser);
 router.post("/new", createUser);
 router.post("/login", passport.authenticate("local", {}), loginUser);
 router.get("/isLoggedIn", isLoggedIn);
-// router.post("/logout", loginRequired, logoutUser);
-router.post("/logout", loginRequired, db.logoutUser);
+router.post("/logout", loginRequired, logoutUser);
 
 module.exports = router;

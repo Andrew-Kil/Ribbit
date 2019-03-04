@@ -2,13 +2,15 @@ const express = require("express");
 const router = express.Router();
 
 const {
+  getAllComments,
   getAllCommentsForPost,
-  getSingleComment,
+  // getSingleComment,
   updateComment,
   deleteComment,
   createComment
 } = require("../db/queries/commentQueries.js");
 
+router.get("/", getAllComments);
 router.get("/:id", getAllCommentsForPost);
 // router.get("/:id", getSingleComment);
 router.put("/:id", updateComment);

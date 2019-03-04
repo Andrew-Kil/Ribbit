@@ -1,5 +1,17 @@
 const { db } = require("./index.js");
 
+const getAllComments = (req, res, next) => {
+  db.any("SELECT * FROM comments")
+    .then(data => {
+      res.status(200).json({
+        status: "Success",
+        data: data,
+        message: "Received all comments"
+      });
+    })
+    .catch(err => next(err));
+};
+
 const getAllCommentsForPost = (req, res, next) => {
   const postId = Number(req.params.id);
   db.any(
@@ -71,6 +83,7 @@ const createComment = (req, res, next) => {
 };
 
 module.exports = {
+  getAllComments,
   getAllCommentsForPost,
   getSingleComment,
   updateComment,
