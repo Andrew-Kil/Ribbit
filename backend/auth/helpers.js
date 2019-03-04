@@ -4,10 +4,19 @@ function comparePass(userPass, databasePass) {
   return bcrypt.compareSync(userPass, databasePass);
 }
 
-function createHash(password) {
+// function createHash(password) {
+//   const salt = bcrypt.genSaltSync();
+//   const hash = bcrypt.hashSync(password, salt);
+//   return hash;
+// }
+
+function createUser(req) {
   const salt = bcrypt.genSaltSync();
-  const hash = bcrypt.hashSync(password, salt);
-  return hash;
+  const hash = bcrypt.hashSync(req.body.password, salt);
+  return db.none(
+    "INSERT INTO users (username, password_digest, email) VALUES (${username}, ${password}, ${email})",
+    { username: req.body.username, password: hash, email: req.body.email }
+  );
 }
 
 function loginRequired(req, res, next) {
@@ -20,6 +29,7 @@ function loginRequired(req, res, next) {
 
 module.exports = {
   comparePass,
-  createHash,
+  // createHash,
+  createUser,
   loginRequired
 };
