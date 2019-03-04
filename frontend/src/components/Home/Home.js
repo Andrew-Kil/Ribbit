@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import HomeSideBar from "../SideBar/HomeSideBar/HomeSideBar.js";
+import AboutSideBar from "../SideBar/AboutSideBar/AboutSideBar.js";
 import AdSideBar from "../SideBar/AdSideBar/AdSideBar.js";
 
 import Posts from "../Post/Posts.js";
@@ -99,6 +100,7 @@ export default class Home extends React.Component {
             <div className="side-bar">
               <HomeSideBar />
               <AdSideBar />
+              <AboutSideBar />
             </div>
           </div>
         </div>

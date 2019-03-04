@@ -1,5 +1,5 @@
 .home-side-bar {
-  height: 265px;
+  height: 290px;
   width: 312px;
   border: 1px grey solid;
   border-radius: 5px;
@@ -49,14 +49,17 @@
 }
 
 .home-side-bar-body-text {
-  font-size: 15px;
-  margin-bottom: 1em;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 8px;
 }
 
 .home-side-bar-create-post-button {
   box-sizing: border-box;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 24px;

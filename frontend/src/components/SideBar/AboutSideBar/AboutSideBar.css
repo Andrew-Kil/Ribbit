@@ -1,4 +1,5 @@
-.ad-side-bar {
+.about-side-bar {
+  height: 48;
   width: 312px;
   border: 1px grey solid;
   border-radius: 5px;
@@ -8,7 +9,7 @@
   background-color: white;
 }
 
-.ad-side-bar-padding {
+.about-side-bar-padding {
   /* border: 5px black solid;
   margin: 0;
   padding: 0;
@@ -24,6 +25,11 @@
 .home-side-bar-home-text {
   margin-left: 50px;
   font-size: 20px;
+}
+
+.home-side-bar-body-text {
+  font-size: 15px;
+  margin-bottom: 1em;
 }
 
 .home-side-bar-get-premium {
@@ -53,10 +59,4 @@
   border: 1px solid black;
   border-radius: 2px;
   margin-left: 10px;
-}
-
-.ad {
-  height: 300px;
-  width: 290px;
-  border-radius: 5px;
 }
