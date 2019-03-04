@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 import "./Posts.css";
@@ -13,9 +14,12 @@ export default class Posts extends Component {
   };
 
   componentDidMount() {
-    fetch("/posts")
-      .then(res => res.json())
-      .then(data => this.setState({ posts: data.data }));
+    axios
+      .get("/posts")
+      .then(res => {
+        this.setState({ posts: res.data.data });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {

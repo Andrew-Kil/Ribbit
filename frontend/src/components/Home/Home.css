@@ -96,7 +96,7 @@
   flex-direction: column;
 }
 
-.join-the-discussion {
+.welcome {
   background-color: #cdeaf8;
   background-size: contain;
   position: relative;
@@ -109,19 +109,19 @@
   padding: 16px;
 }
 
-.join-the-discussion-title {
+.welcome-title {
   line-height: 26px;
-  color: #431888;
+  color: #016400;
   font-size: 32px;
   font-weight: bold;
 }
 
-.join-the-discussion-description {
+.welcome-description {
   font-family: "Noto Sans", Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  color: #431888;
+  color: #016400;
   display: block;
   padding-top: 4px;
 }

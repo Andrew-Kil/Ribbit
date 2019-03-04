@@ -14,7 +14,6 @@ import trending from "./trending.png";
 
 export default class Home extends React.Component {
   render() {
-    // console.log(this.props);
     console.log(this.props);
     return (
       <div>
@@ -63,11 +62,9 @@ export default class Home extends React.Component {
 
           <div className="content-container">
             <div className="main-content-container">
-              <div className="join-the-discussion">
-                <h1 className="join-the-discussion-title">
-                  Welcome to Ribbit!
-                </h1>
-                <span className="join-the-discussion-description">
+              <div className="welcome">
+                <h1 className="welcome-title">Welcome to Ribbit!</h1>
+                <span className="welcome-description">
                   Come for the frogs, stay for the dank memes.
                 </span>
                 <a className="become-a-ribbitor" href="/signup">
