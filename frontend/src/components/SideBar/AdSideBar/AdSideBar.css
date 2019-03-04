@@ -21,11 +21,6 @@
   padding: 12px;
 }
 
-.home-side-bar-home-text {
-  margin-left: 50px;
-  font-size: 20px;
-}
-
 .home-side-bar-get-premium {
   box-sizing: border-box;
   text-align: center;
@@ -64,4 +59,9 @@
 .ad-side-bar-body-header {
   font-size: 10px;
   font-weight: bold;
+}
+
+.ad-side-bar-body-text {
+  float: right;
+  font-size: 8px;
 }
