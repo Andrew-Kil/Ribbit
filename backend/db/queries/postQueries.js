@@ -15,7 +15,7 @@ const getAllPosts = (req, res, next) => {
 };
 
 const getSinglePost = (req, res, next) => {
-  let postId = parseInt(req.params.id);
+  let postId = Number(req.params.id);
   db.any(
     "SELECT posts.*, subribbits.name, subribbits.subscribbitors, users.username, comments.comment, comments.user_id FROM posts JOIN subribbits ON posts.sub_id=subribbits.id JOIN users ON posts.user_id=users.id JOIN comments ON posts.id=comments.post_id WHERE posts.id=$1",
     postId
@@ -33,7 +33,7 @@ const getSinglePost = (req, res, next) => {
 const updatePost = (req, res, next) => {
   db.none("UPDATE posts SET body=${body} WHERE id=${id}", {
     body: req.body.body,
-    id: parseInt(req.params.id)
+    id: Number(req.params.id)
   })
     .then(() => {
       res.status(200).json({
@@ -45,7 +45,7 @@ const updatePost = (req, res, next) => {
 };
 
 const deletePost = (req, res, next) => {
-  let postId = parseInt(req.params.id);
+  let postId = Number(req.params.id);
   db.result("DELETE FROM posts WHERE id=$1", postId)
     .then(result => {
       res.status(200).json({

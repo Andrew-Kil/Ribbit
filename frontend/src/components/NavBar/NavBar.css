@@ -8,7 +8,7 @@
   border: 2px black solid;
   border-radius: 5px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 30px;
 }
 
@@ -108,6 +108,7 @@
 .login-logout-signup {
   width: 256px;
   height: 32px;
+  padding-top: 22px;
 }
 
 .login,
@@ -124,15 +125,15 @@
   line-height: 24px;
   text-transform: uppercase;
   background-color: white;
-  color: rgb(0, 121, 211);
-  fill: rgb(0, 121, 211);
+  color: black;
+  fill: black;
   border-width: 1px;
   border-style: solid;
   border-image: initial;
   border-radius: 4px;
   text-decoration: none;
   padding: 3px 16px;
-  border-color: rgb(0, 121, 211);
+  border-color: black;
 }
 
 .signup {

@@ -15,7 +15,7 @@ const getAllUsers = (req, res, next) => {
 };
 
 const getSingleUser = (req, res, next) => {
-  let userId = parseInt(req.params.id);
+  const userId = Number(req.params.id);
   db.one("SELECT * FROM users WHERE id=$1", userId)
     .then(data => {
       res.status(200).json({
@@ -28,7 +28,7 @@ const getSingleUser = (req, res, next) => {
 };
 
 const getAllPostsForAUser = (req, res, next) => {
-  let userId = parseInt(req.params.id);
+  const userId = Number(req.params.id);
   db.any(
     "SELECT posts.* FROM users JOIN posts ON posts.user_id = users.id WHERE users.id = $1",
     [userId]
@@ -44,7 +44,7 @@ const getAllPostsForAUser = (req, res, next) => {
 };
 
 const getAllCommentsForAUser = (req, res, next) => {
-  let userId = parseInt(req.params.id);
+  const userId = Number(req.params.id);
   db.any(
     "SELECT comments.* FROM comments JOIN comments ON comments.user_id = users.id WHERE users.id = $1",
     [userId]
@@ -65,7 +65,7 @@ const updateUser = (req, res, next) => {
     {
       username: req.body.username,
       email: req.body.email,
-      id: parseInt(req.params.id)
+      id: Number(req.params.id)
     }
   )
     .then(() => {
@@ -78,7 +78,7 @@ const updateUser = (req, res, next) => {
 };
 
 const deleteUser = (req, res, next) => {
-  let userId = parseInt(req.params.id);
+  const userId = Number(req.params.id);
   db.result("DELETE FROM users WHERE id=$1", userId)
     .then(result => {
       res.status(200).json({

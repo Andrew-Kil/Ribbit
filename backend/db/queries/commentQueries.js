@@ -1,7 +1,7 @@
 const { db } = require("./index.js");
 
 const getAllCommentsForPost = (req, res, next) => {
-  let postId = parseInt(req.params.id);
+  const postId = Number(req.params.id);
   db.any(
     "SELECT comments.*, users.*, posts.* FROM comments JOIN users ON comments.user_id=users.id JOIN posts ON comments.post_id=posts.id WHERE posts.id = $1",
     [postId]
@@ -17,7 +17,7 @@ const getAllCommentsForPost = (req, res, next) => {
 };
 
 const getSingleComment = (req, res, next) => {
-  let commentId = parseInt(req.params.id);
+  const commentId = Number(req.params.id);
   db.one("SELECT * FROM comments WHERE id=$1", commentId)
     .then(data => {
       res.status(200).json({
@@ -32,7 +32,7 @@ const getSingleComment = (req, res, next) => {
 const updateComment = (req, res, next) => {
   db.none("UPDATE comments SET body=${body} WHERE id=${id}", {
     body: req.body.body,
-    id: parseInt(req.params.id)
+    id: Number(req.params.id)
   })
     .then(() => {
       res.status(200).json({
@@ -44,7 +44,7 @@ const updateComment = (req, res, next) => {
 };
 
 const deleteComment = (req, res, next) => {
-  let commentId = parseInt(req.params.id);
+  const commentId = Number(req.params.id);
   db.result("DELETE FROM comments WHERE id=$1", commentId)
     .then(result => {
       res.status(200).json({

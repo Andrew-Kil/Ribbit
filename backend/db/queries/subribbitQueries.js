@@ -13,7 +13,7 @@ const getAllSubribbits = (req, res, next) => {
 };
 
 const getSingleSubribbit = (req, res, next) => {
-  let userId = parseInt(req.params.id);
+  const userId = Number(req.params.id);
   db.one("SELECT * FROM subribbits WHERE id=$1", userId)
     .then(data => {
       res.status(200).json({
@@ -26,7 +26,7 @@ const getSingleSubribbit = (req, res, next) => {
 };
 
 const getAllPostsForASubribbit = (req, res, next) => {
-  let subId = parseInt(req.params.id);
+  const subId = Number(req.params.id);
   db.any(
     "SELECT posts.*, users.username, subribbits.* FROM posts JOIN users ON posts.user_id=users.id JOIN subribbits ON posts.sub_id=subribbits.id WHERE subribbits.id = $1",
     [subId]
@@ -60,7 +60,8 @@ const updateSubribbit = (req, res, next) => {
 };
 
 const deleteSubribbit = (req, res, next) => {
-  db.result("DELETE FROM subribbits WHERE name=$1")
+  const id = Number(req.params.id);
+  db.result("DELETE FROM subribbits WHERE name=$1", [id])
     .then(result => {
       res.status(200).json({
         status: "Success",

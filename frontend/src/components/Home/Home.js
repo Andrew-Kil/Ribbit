@@ -6,10 +6,10 @@ import AdSideBar from "../SideBar/AdSideBar/AdSideBar.js";
 import Posts from "../Post/Posts.js";
 
 import trending from "./trending.png";
-import lilypad from "./lilypad.png";
-import pond from "./pond.png";
-import frog from "./frog.jpg";
-import frogvstoad from "./frogvstoad.png";
+// import lilypad from "./lilypad.png";
+// import pond from "./pond.png";
+// import frog from "./frog.jpg";
+// import frogvstoad from "./frogvstoad.png";
 
 export default class Home extends React.Component {
   render() {
