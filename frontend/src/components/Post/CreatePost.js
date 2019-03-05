@@ -40,42 +40,50 @@ export default class CreatePost extends Component {
         <form onSubmit={this.handleSubmit}>
           <br />
           <div className="create-a-post-text">Create a post</div>
-          <br /> Title
+          <br />
           <div>
-            <input
+            <textarea
               className="title-input"
               placeholder="Title"
               onChange={this.handleChange}
               name="title"
+              type="text"
             />
           </div>{" "}
           <br />
-          Text
           <div>
             <textarea
               className="text-input"
               placeholder="Text"
               onChange={this.handleChange}
               name="body"
+              type="text"
             />
           </div>
-          <div>
+          <br />
+          <div id="user-id-field">
+            User ID:
+            <br />
             <input
               className="user-id-input"
-              placeholder="User ID"
               onChange={this.handleChange}
               name="user_id"
             />
           </div>
-          <div>
+          <br />
+          <div id="sub-id-field">
+            Sub ID:
+            <br />
             <input
               className="sub-id-input"
-              placeholder="Sub ID"
               onChange={this.handleChange}
               name="sub_id"
             />
           </div>
-          <button type="submit">POST</button>
+          <br />
+          <button type="submit" className="create-post-button">
+            POST
+          </button>
         </form>
       </div>
     );

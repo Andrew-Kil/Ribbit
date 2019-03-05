@@ -12,13 +12,21 @@ import frog from "./logos/frog.png";
 // import user_profile_avatar from "./avatar/user-profile-avatar.png";
 
 export default class NavBar extends Component {
-  state = {
-    searchInput: "",
-    darkMode: false,
-    isLoggedIn: true,
-    user: "",
-    dropdownClicked: false
-  };
+  constructor() {
+    super();
+
+    this.state = {
+      searchInput: "",
+      darkMode: false,
+      isLoggedIn: true,
+      user: "",
+      dropdownClicked: false,
+      showMenu: false
+    };
+
+    this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+  }
 
   componentDidMount() {
     this.checkAuthenticateStatus();
@@ -62,18 +70,34 @@ export default class NavBar extends Component {
       : document.body.classList.add("dark-mode");
   };
 
-  toggleDropDown = () => {
-    const dropDownClicked = this.state.dropdownClicked;
-    this.setState({
-      dropdownClicked: !dropDownClicked
+  // showMenu = () => {
+  //   const dropDownClicked = this.state.dropdownClicked;
+  //   this.setState({
+  //     dropdownClicked: !dropDownClicked
+  //   });
+  //   if (dropDownClicked) {
+  //     document.body.classList.add("show");
+  //   } else {
+  //     document.body.classList.remove("show");
+  //   }
+  //   console.log("clicked!");
+  // };
+
+  showMenu(event) {
+    event.preventDefault();
+
+    this.setState({ showMenu: true }, () => {
+      document.addEventListener("click", this.closeMenu);
     });
-    if (dropDownClicked) {
-      document.body.classList.add("show");
-    } else {
-      document.body.classList.remove("show");
+  }
+
+  closeMenu(event) {
+    if (!this.dropdownMenu.contains(event.target)) {
+      this.setState({ showMenu: false }, () => {
+        document.removeEventListener("click", this.closeMenu);
+      });
     }
-    console.log("clicked!");
-  };
+  }
 
   logoutUser = () => {
     axios
@@ -175,8 +199,8 @@ export default class NavBar extends Component {
             <span className="signup">Sign Up</span>
           </NavLink>
         </div>
-        <div className="user-dropdown">
-          <button className="nav-dropdown-menu" onClick={this.toggleDropDown}>
+        <div className="user-dropdown" onClick={this.showMenu}>
+          <button className="nav-dropdown-menu">
             <div className="icon-container">
               <img
                 src={user_profile}
@@ -190,13 +214,46 @@ export default class NavBar extends Component {
               />
             </div>
           </button>
-          <div className="dropdown-content">
-            {/* <NavLink to={"/ribbit-coins"}>Reddit Coins</NavLink>
-            <NavLink to={"/ribbit-premium"}>Reddit Premium</NavLink>
+
+          {this.state.showMenu ? (
+            <div
+              className="menu"
+              ref={element => {
+                this.dropdownMenu = element;
+              }}
+            >
+              <br />
+
+              <div className="dropdown-links-container">
+                <NavLink to={"/ribbit-coins"} className="dropdown-links">
+                  Ribbit Coins
+                </NavLink>
+              </div>
+              <div className="dropdown-links-container">
+                <NavLink to={"/ribbit-premium"} className="dropdown-links">
+                  Ribbit Premium
+                </NavLink>
+              </div>
+              <div className="dropdown-links-container">
+                <NavLink to={"/help-center"} className="dropdown-links">
+                  Help Center
+                </NavLink>
+              </div>
+              <div className="dropdown-links-container">
+                <NavLink to={"/old-ribbit"} className="dropdown-links">
+                  Visit Old Ribbit
+                </NavLink>
+              </div>
+            </div>
+          ) : null}
+
+          {/* <div className="dropdown-content">
+            <NavLink to={"/ribbit-coins"}>Ribbit Coins</NavLink>
+            <NavLink to={"/ribbit-premium"}>Ribbit Premium</NavLink>
             <NavLink to={"/help-center"}>Help Center</NavLink>
-            <NavLink to={"/old-ribbit"}>Visit Old Ribbit</NavLink> */}
-            {/* <div>hi</div> */}
-          </div>
+            <NavLink to={"/old-ribbit"}>Visit Old Ribbit</NavLink>
+            <div>hi</div>
+          </div> */}
         </div>
       </nav>
     );
