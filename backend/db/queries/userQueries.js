@@ -30,7 +30,7 @@ const getSingleUser = (req, res, next) => {
 const getAllPostsForAUser = (req, res, next) => {
   const userId = Number(req.params.id);
   db.any(
-    "SELECT posts.* FROM users JOIN posts ON posts.user_id = users.id WHERE users.id = $1",
+    "SELECT posts.* FROM users JOIN posts ON posts.user_id=users.id WHERE users.id=$1",
     [userId]
   )
     .then(data => {
@@ -46,7 +46,7 @@ const getAllPostsForAUser = (req, res, next) => {
 const getAllCommentsForAUser = (req, res, next) => {
   const userId = Number(req.params.id);
   db.any(
-    "SELECT comments.* FROM comments JOIN comments ON comments.user_id = users.id WHERE users.id = $1",
+    "SELECT comments.* FROM users JOIN comments ON comments.user_id=users.id WHERE users.id=$1",
     [userId]
   )
     .then(data => {
@@ -58,6 +58,15 @@ const getAllCommentsForAUser = (req, res, next) => {
     })
     .catch(err => next(err));
 };
+
+// Work in progress //
+const getAllPostsCommentsForAUser = (req, res, next) => {
+  const userId = Number(req.params.id);
+  db.any(
+    "SELECT posts.*, comments.* FROM users INNER JOIN posts ON posts.user_id=users.id INNER JOIN comments ON comments.user_id=users.id WHERE users.id=$1"
+  );
+};
+// Work in progress //
 
 const updateUser = (req, res, next) => {
   db.none(

@@ -90,13 +90,13 @@ export default class NavBar extends Component {
   };
 
   render() {
-    const { isLoggedIn } = this.state;
+    // const { isLoggedIn } = this.state;
+    // let logoutButton = isLoggedIn ? (
+    //   <span>
+    //     <button onClick={this.logoutUser}>Logout</button>
+    //   </span>
+    // ) : null;
 
-    let logoutButton = isLoggedIn ? (
-      <span>
-        <button onClick={this.logoutUser}>Logout</button>
-      </span>
-    ) : null;
     return (
       <nav className="navbar">
         <NavLink to={"/"}>
@@ -117,8 +117,8 @@ export default class NavBar extends Component {
             />
           </div>
         </NavLink>
-        <form className="navbar-form" onSubmit={this.handleSubmit}>
-          <div className="search-container">
+        <div className="navbar-container">
+          {/* <label className="icon-label">
             <img
               src={magnifying_glass}
               alt="magnifying glass"
@@ -126,17 +126,21 @@ export default class NavBar extends Component {
               height="30"
               width="30"
             />
-            <input
-              type="text"
-              name="searchInput"
-              value={this.state.searchInput}
-              size="50"
-              placeholder="Search Ribbit"
-              className="search-bar"
-              onChange={this.handleChange}
-            />
-          </div>
-        </form>
+          </label> */}
+          <form className="navbar-form" onSubmit={this.handleSubmit}>
+            <div className="search-container">
+              <input
+                type="text"
+                name="searchInput"
+                value={this.state.searchInput}
+                size="50"
+                placeholder="Search Ribbit"
+                className="search-bar"
+                onChange={this.handleChange}
+              />
+            </div>
+          </form>
+        </div>
         <div>
           <button id="dark-mode" onClick={this.toggleDarkMode}>
             Dark Mode

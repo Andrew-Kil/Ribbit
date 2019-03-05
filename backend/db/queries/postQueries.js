@@ -47,11 +47,11 @@ const updatePost = (req, res, next) => {
 const deletePost = (req, res, next) => {
   let postId = Number(req.params.id);
   db.result("DELETE FROM posts WHERE id=$1", postId)
-    .then(result => {
+    .then(data => {
       res.status(200).json({
         status: "Success",
-        message: "Removed a post",
-        result: result
+        data: data,
+        message: "Removed a post"
       });
     })
     .catch(err => next(err));

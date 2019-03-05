@@ -2,19 +2,29 @@ import React from "react";
 
 import "./AdSideBar.css";
 
-import geico from "./geico-ad.jpg";
-import snickers from "./snickers-ad.jpg";
-import tobasco from "./tobasco-ad.jpg";
-import starbucks from "./starbucks-ad.png";
-import mcdonalds from "./mcdonalds-ad.jpg";
-import coke_zero from "./coke-zero-ad.jpeg";
-import adidas from "./adidas.jpg";
+import geico from "./ads/geico-ad.jpg";
+import snickers from "./ads/snickers-ad.jpg";
+import tobasco from "./ads/tobasco-ad.jpg";
+import starbucks from "./ads/starbucks-ad.png";
+import mcdonalds from "./ads/mcdonalds-ad.jpg";
+import coke_zero from "./ads/coke-zero-ad.jpeg";
+import adidas from "./ads/adidas.jpg";
+import tesla from "./ads/tesla.jpg";
+import progressive from "./ads/progressive.png";
 
-const ads = [geico, snickers, tobasco, starbucks, mcdonalds, coke_zero, adidas];
+const ads = [
+  geico,
+  snickers,
+  tobasco,
+  starbucks,
+  mcdonalds,
+  coke_zero,
+  adidas,
+  tesla,
+  progressive
+];
+
 const randomAd = ads[Math.floor(Math.random() * ads.length)];
-
-console.log(Math.floor(Math.random() * 2));
-// # from 0-1
 
 export default function AdSideBar() {
   return (
@@ -28,7 +38,7 @@ export default function AdSideBar() {
             </span>
             <br />
             <br />
-            <img src={randomAd} alt="geico ad" className="ad" />
+            <img src={randomAd} alt="random ad is shown" className="ad" />
           </div>
         </div>
       </div>

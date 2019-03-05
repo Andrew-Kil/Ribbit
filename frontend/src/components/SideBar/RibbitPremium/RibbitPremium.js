@@ -16,10 +16,12 @@ export default function RibbitPremium() {
               alt="lilypad - ribbit premium icon"
               className="lilypad"
             />
-            <div className="premium-side-bar-body-header">Ribbit Premium</div>
-            <div className="premium-side-bar-body-text">
-              The best Ribbit experience
-            </div>
+            <span className="premium-side-bar-body-header">
+              Ribbit Premium <br />
+              <span className="premium-side-bar-body-text">
+                The best Ribbit experience
+              </span>
+            </span>
             <div className="premium-side-bar-button">
               <a className="premium-side-bar-get-premium" href="/get-premium">
                 <button className="try-premium-button">TRY NOW</button>

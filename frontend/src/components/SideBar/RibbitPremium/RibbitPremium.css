@@ -81,3 +81,11 @@
   border-radius: 5px;
   color: white;
 }
+
+.premium-side-bar-body-header {
+  font-weight: bold;
+}
+
+.premium-side-bar-body-text {
+  font-size: 10px;
+}
