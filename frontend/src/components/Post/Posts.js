@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 import "./Posts.css";
 
-import chat_icon from "./chat-icon.png";
-import up_arrow from "./up-arrow.png";
-import down_arrow from "./down-arrow.png";
+import chat_icon from "./icons/chat-icon.png";
+import up_arrow from "./icons/up-arrow.png";
+import down_arrow from "./icons/down-arrow.png";
 
 // import Home from "../Home/Home.js";
 

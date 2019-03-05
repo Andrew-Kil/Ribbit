@@ -4,13 +4,12 @@ import axios from "axios";
 import "./NavBar.css";
 import Auth from "../../utils/Auth";
 
-import user_profile from "./user-profile.png";
-import down_arrow from "./down-arrow.png";
-import logo from "./ribbit-logo.png";
-import frog from "./frog.png";
-import magnifying_glass from "./magnifying_glass.png";
-// import user_profile_avatar from "./user-profile-avatar.png";
-// import fly from "./fly.png";
+import user_profile from "./icons/user-profile.png";
+import down_arrow from "./icons/down-arrow.png";
+import logo from "./logos/ribbit-logo.png";
+import frog from "./logos/frog.png";
+// import magnifying_glass from "./icons/magnifying_glass.png";
+// import user_profile_avatar from "./avatar/user-profile-avatar.png";
 
 export default class NavBar extends Component {
   state = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
-import frog from "../NavBar/frog.png";
+import frog from "../NavBar/logos/frog.png";
 
 export default class Login extends Component {
   state = {

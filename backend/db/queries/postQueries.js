@@ -59,7 +59,7 @@ const deletePost = (req, res, next) => {
 
 const createPost = (req, res, next) => {
   db.none(
-    "INSERT INTO posts(title, body, created_at, user_id, sub_id) VALUES(${title}, ${body}, ${created_at}, ${user_id}, ${sub_id})",
+    "INSERT INTO posts(title, body, user_id, sub_id) VALUES(${title}, ${body}, ${user_id}, ${sub_id})",
     req.body
   )
     .then(() => {

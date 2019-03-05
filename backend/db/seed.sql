@@ -25,7 +25,7 @@ CREATE TABLE posts
     id SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     body TEXT NOT NULL,
-    created_at VARCHAR NOT NULL,
+    created_at VARCHAR,
     user_id INT REFERENCES users(id) NOT NULL,
     sub_id INT REFERENCES subribbits(id) NOT NULL
 );

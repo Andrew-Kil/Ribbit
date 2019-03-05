@@ -11,9 +11,9 @@ const {
 
 router.get("/", getAllPosts);
 router.get("/:id", getSinglePost);
-router.get("/create", createPost);
+// router.get("/create", createPost);
 router.put("/:id", updatePost);
 router.delete("/:id", deletePost);
-router.post("/", createPost);
+router.post("/create", createPost);
 
 module.exports = router;

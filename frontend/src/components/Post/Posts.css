@@ -100,3 +100,21 @@
 .downcroak:hover {
   border: 1px solid green;
 }
+
+.title-input {
+  width: 700px;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.text-input {
+  width: 700px;
+  height: 200px;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.create-a-post-text {
+  font-size: 20px;
+}
