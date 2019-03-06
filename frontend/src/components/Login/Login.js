@@ -1,36 +1,82 @@
 import React, { Component } from "react";
+import axios from "axios";
 import "./Login.css";
 import frog from "../NavBar/logos/frog.png";
 
+import Auth from "../../utils/Auth";
+
 export default class Login extends Component {
-  state = {
-    username: "",
-    password: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password_digest: ""
+    };
+  }
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(this.state);
   };
 
-  handleSubmit = e => {
+  // loginUser = e => {
+  //   e.preventDefault();
+  //   const { username, password } = this.state;
+
+  //   axios
+  //     .post("/users/login", { username, password })
+  //     .then(() => {
+  //       Auth.authenticateUser(username);
+  //     })
+  //     .then(() => {
+  //       this.props.checkAuthenticateStatus();
+  //     })
+  //     .then(() => {
+  //       this.setState({
+  //         username: "",
+  //         password: ""
+  //       });
+  //     });
+  // };
+
+  handleLogin = e => {
     e.preventDefault();
-    if (this.state.username === "bob" && this.state.password === "smith") {
-      console.log("LOGIN SUCCESS");
-    }
-    console.log("FORM SUBMITTED");
+    console.log("yay");
+    console.log(this.state);
+
+    axios
+      .post("/users/login", {
+        username: this.state.username,
+        password_digest: this.state.password_digest
+      })
+      .then(res => {
+        debugger;
+        Auth.authenticateUser(this.state.username);
+      })
+      .then(() => {
+        this.props.checkAuthenticateStatus();
+        this.setState({
+          username: "",
+          password_digest: ""
+        });
+      })
+      .catch(err => {
+        return err;
+      });
   };
 
   validateForm() {
-    return this.state.username.length > 0 && this.state.password.length > 0;
+    return (
+      this.state.username.length > 0 && this.state.password_digest.length > 0
+    );
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="form-container">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleLogin}>
           <fieldset className="signin-username-fieldset">
             <img
               src={frog}
@@ -42,36 +88,27 @@ export default class Login extends Component {
             <h1 className="signin-title">Sign in</h1>
             <input
               id="loginUsername"
-              class="AnimatedForm__textInput"
               type="text"
               name="username"
               data-empty="true"
               onChange={this.handleChange}
             />
-            <label class="username-text-input" for="loginUsername">
+            <label className="username-text-input" htmlFor="loginUsername">
               Username
             </label>
           </fieldset>
           <fieldset>
             <input
               id="loginPassword"
-              class="AnimatedForm__textInput"
               type="password"
-              name="password"
+              name="password_digest"
               data-empty="true"
               onChange={this.handleChange}
             />
-            <label class="AnimatedForm__textInputLabel" for="loginPassword">
-              Password
-            </label>
+            <label htmlFor="loginPassword">Password</label>
           </fieldset>
-          <button
-            class="AnimatedForm__submitButton"
-            type="submit"
-            disabled={!this.validateForm()}
-          >
-            Sign in
-          </button>
+          {/* <button type="submit" disabled={!this.validateForm()}> */}
+          <button type="submit">Sign in</button>
           <p>New to Ribbit?</p>
           <a href="/signup" className="signup-link">
             Sign Up

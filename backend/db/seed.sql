@@ -8,7 +8,7 @@ CREATE TABLE users
     id SERIAL PRIMARY KEY,
     username VARCHAR(20) UNIQUE NOT NULL,
     password_digest VARCHAR NOT NULL,
-    email VARCHAR(40) NOT NULL,
+    email VARCHAR(40),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

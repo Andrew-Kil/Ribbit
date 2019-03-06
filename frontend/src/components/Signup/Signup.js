@@ -27,54 +27,55 @@ export default class Signup extends Component {
     console.log(this.state);
     return (
       <div className="form-container">
+        <div className="login-banner" />
         <form onSubmit={this.handleSubmit}>
-          <h1 className="signup-title">Join the worldwide conversation.</h1>
-          <p className="signup-description">
-            By having a Ribbit account, you can subscribe, vote, and comment on
-            all your favorite Ribbit content. <br />
-            Sign up in just seconds.
-          </p>
-          <fieldset className="email-fieldset">
-            <input
-              type="email"
-              name="email"
-              className="signup-input-email"
-              onChange={this.handleChange}
-            />
-            <label class="email-input-label">Email</label>
-          </fieldset>
-          <fieldset>
-            <Link to="/signupInfo" className="next-button">
-              NEXT
-            </Link>
-          </fieldset>
-          <div className="text-bottom">
-            Already a Ribbitor? {""}
-            <a class="link-bottom" href="/login">
-              Log in
-            </a>
+          <div className="login-spacing">
+            <h1 className="signup-title">Join the worldwide conversation.</h1>
+            <br />
+            <p className="signup-description">
+              By having a Ribbit account, you can subscribe, vote, and comment
+              on all your favorite Ribbit content. <br />
+              Sign up in just seconds.
+            </p>
+            <br />
+            <fieldset>
+              <Link to="/signupInfo" className="next-button">
+                NEXT
+              </Link>
+            </fieldset>
+            <br />
+            <div className="text-bottom">
+              Already a Ribbitor? {""}
+              <a class="link-bottom" href="/login">
+                LOG IN
+              </a>
+            </div>
+            <br />
+            <p className="user-agreement">
+              By signing up, you agree to our {""}
+              <a
+                target="_blank"
+                href="https://www.reddit.com/help/useragreement"
+              >
+                Terms {""}
+              </a>
+              and that you have read our {""}
+              <a
+                target="_blank"
+                href="https://www.reddit.com/help/privacypolicy/"
+              >
+                Privacy Policy {""}
+              </a>
+              and {""}
+              <a
+                target="_blank"
+                href="https://www.reddit.com/help/contentpolicy/"
+              >
+                Content Policy
+              </a>
+              .
+            </p>
           </div>
-          <p className="user-agreement">
-            By signing up, you agree to our {""}
-            <a target="_blank" href="https://www.reddit.com/help/useragreement">
-              Terms {""}
-            </a>
-            and that you have read our {""}
-            <a
-              target="_blank"
-              href="https://www.reddit.com/help/privacypolicy/"
-            >
-              Privacy Policy {""}
-            </a>
-            and {""}
-            <a
-              target="_blank"
-              href="https://www.reddit.com/help/contentpolicy/"
-            >
-              Content Policy
-            </a>
-            .
-          </p>
         </form>
       </div>
     );

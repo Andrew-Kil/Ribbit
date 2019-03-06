@@ -10,31 +10,29 @@ a {
   text-decoration: none;
 }
 
+.form-container {
+  width: 60%;
+  height: 60%;
+  border-radius: 5px;
+}
+
+.form-spacing {
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-right: 80px;
+}
+
 .signup-title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   line-height: 22px;
 }
 
 .signup-description {
   font-family: Noto Sans, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-}
-
-.signup-input-email {
-  border-color: rgba(0, 0, 0, 0.2);
-  transform: translateZ(0);
-  outline: 0;
-  width: 392px;
-  -webkit-appearance: none;
-  transition: all 0.2s ease-in-out;
-  height: 18px;
-  padding: 22px 12px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  background-color: #fcfcfb;
 }
 
 .next-button {
@@ -42,7 +40,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  /* color: #fff; */
+  color: #fff;
   display: inline-block;
   border: none;
   border-radius: 4px;
@@ -51,14 +49,14 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   outline: 0;
-  line-height: unset;
-  height: 35px;
+  /* line-height: unset; */
+  height: 30px;
   width: 155px;
   min-width: 155px;
-  padding-top: 100px;
+  padding-top: 14px;
 }
 
-.email-input-label {
+/* .email-input-label {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -77,9 +75,73 @@ a {
   transition: all 0.2s ease-in-out;
   pointer-events: none;
   line-height: 23px;
-}
+} */
 
-.email-fieldset {
+/* .email-fieldset {
   display: block;
   position: absolute;
+} */
+
+/* .signup-input-username,
+.signup-input-email {
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+  outline: 0;
+  width: 400px;
+  -webkit-appearance: none;
+  transition: all 0.2s ease-in-out;
+  height: 18px;
+  padding: 22px 12px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #fcfcfb;
+} */
+
+.signup-input-password,
+.signup-input-username,
+.signup-input-email {
+  width: 400px;
+  height: 18px;
+  padding: 22px 12px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #fcfcfb;
+  margin-top: 24px;
+}
+
+.link-bottom {
+  font-family: IBMPlexSans, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #0079d2;
+}
+
+.user-agreement {
+  width: 50%;
+}
+
+.login-banner {
+  background-image: url(https://www.redditstatic.com/accountmanager/bbb584033aa89e39bad69436c504c9bd.png);
+  width: 18%;
+  min-height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-spacing {
+  padding-left: 40px;
+}
+
+.signup-button,
+.back-button {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.signup-button {
+  float: right;
 }

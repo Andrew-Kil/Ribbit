@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { withRouter } from "react-router";
 import { Route, Switch } from "react-router-dom";
 import Auth from "../utils/Auth";
 import Form from "./Form";
@@ -19,20 +18,8 @@ class AuthForm extends Component {
 
   registerUser = async e => {
     e.preventDefault();
-    const { username, password } = this.state;
+    // const { username, password } = this.state;
 
-    await axios.post("/users/new", { username, password });
-
-    Auth.authenticateUser(username);
-
-    await axios.post("/users/login", { username, password });
-
-    await this.props.checkAuthenticateStatus();
-
-    this.setState({
-      username: "",
-      password: ""
-    });
     // axios.post("/users/new", { username, password }).then(() => {
     //   Auth.authenticateUser(username);
     //   axios

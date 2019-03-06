@@ -4,11 +4,11 @@ function comparePass(userPass, databasePass) {
   return bcrypt.compareSync(userPass, databasePass);
 }
 
-// function createHash(password) {
-//   const salt = bcrypt.genSaltSync();
-//   const hash = bcrypt.hashSync(password, salt);
-//   return hash;
-// }
+function createHash(password) {
+  const salt = bcrypt.genSaltSync();
+  const hash = bcrypt.hashSync(password, salt);
+  return hash;
+}
 
 function createUser(req) {
   const salt = bcrypt.genSaltSync();
@@ -29,7 +29,7 @@ function loginRequired(req, res, next) {
 
 module.exports = {
   comparePass,
-  // createHash,
+  createHash,
   createUser,
   loginRequired
 };

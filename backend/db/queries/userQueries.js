@@ -112,7 +112,7 @@ const createUser = (req, res, next) => {
     .then(() => {
       res.status(200).json({
         status: "Success",
-        message: "Created new user "
+        message: "Created new user"
       });
     })
     .catch(err => next(err));
@@ -143,12 +143,12 @@ const logoutUser = (req, res, next) => {
 };
 
 const loginUser = (req, res) => {
-  res.json(req.user);
+  res.json(req.username);
 };
 
 const isLoggedIn = (req, res) => {
-  if (req.user) {
-    res.json({ username: req.user });
+  if (req.username) {
+    res.json({ username: req.username });
   } else {
     res.json({ username: null });
   }
