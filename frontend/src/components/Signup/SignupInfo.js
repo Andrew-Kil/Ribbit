@@ -96,12 +96,12 @@ export default class SignupInfo extends Component {
             <label class="email-input-label">Email</label>
           </fieldset>
           <br />
-          <p>Here are some username suggestions</p>
+          <p>Here are some username suggestions:</p>
           <br />
           <p>2_frog_2_furious</p>
+          <p>greenEggsAndSpam</p>
           <p>i_toad_u_so</p>
-          <p>OGinternettroll</p>
-          <p>NOT_N.S.A.</p>
+          <p>prison_mike</p>
           <p>beer_pond_champion8572</p>
           <br />
 

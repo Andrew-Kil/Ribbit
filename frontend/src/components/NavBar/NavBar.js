@@ -6,6 +6,7 @@ import Auth from "../../utils/Auth";
 
 import user_profile from "./icons/user-profile.png";
 import down_arrow from "./icons/down-arrow.png";
+import popular_arrow from "./icons/popular-arrow.jpg";
 import logo from "./logos/ribbit-logo.png";
 import frog from "./logos/frog.png";
 import darkmode from "./icons/darkmode.png";
@@ -142,6 +143,15 @@ export default class NavBar extends Component {
           </div>
         </NavLink>
 
+        <div className="nav-popular">
+          <img
+            src={popular_arrow}
+            alt="popular arrow icon"
+            className="popular-arrow"
+          />
+          <span className="nav-popular-text">Popular</span>
+        </div>
+
         <div className="navbar-container">
           {/* <label className="icon-label">
             <img
@@ -188,10 +198,8 @@ export default class NavBar extends Component {
 
         <div className="login-logout-signup">
           <NavLink to={"/login"}>
-            <span className="login">Log-in</span>
+            <span className="login">Log In</span>
           </NavLink>
-
-          {/* {logoutButton} */}
 
           <NavLink to={"/signup"}>
             <span className="signup">Sign Up</span>

@@ -15,7 +15,20 @@ const getAllPosts = (req, res, next) => {
 };
 
 const getSinglePost = (req, res, next) => {
-  let postId = Number(req.params.id);
+  const postId = Number(req.params.id);
+  db.one("SELECT * FROM posts WHERE posts.id=$1", postId)
+    .then(data => {
+      res.status(200).json({
+        status: "Success",
+        data: data,
+        message: "Received single post info"
+      });
+    })
+    .catch(err => next(err));
+};
+
+const getSinglePostInfo = (req, res, next) => {
+  const postId = Number(req.params.id);
   db.any(
     "SELECT posts.*, subribbits.name, subribbits.subscribbitors, users.username, comments.comment, comments.user_id FROM posts JOIN subribbits ON posts.sub_id=subribbits.id JOIN users ON posts.user_id=users.id JOIN comments ON posts.id=comments.post_id WHERE posts.id=$1",
     postId
@@ -74,6 +87,7 @@ const createPost = (req, res, next) => {
 module.exports = {
   getAllPosts,
   getSinglePost,
+  getSinglePostInfo,
   updatePost,
   deletePost,
   createPost

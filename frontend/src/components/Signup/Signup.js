@@ -53,24 +53,13 @@ export default class Signup extends Component {
             <br />
             <p className="user-agreement">
               By signing up, you agree to our {""}
-              <a
-                target="_blank"
-                href="https://www.reddit.com/help/useragreement"
-              >
-                Terms {""}
-              </a>
+              <a href="https://www.reddit.com/help/useragreement">Terms {""}</a>
               and that you have read our {""}
-              <a
-                target="_blank"
-                href="https://www.reddit.com/help/privacypolicy/"
-              >
+              <a href="https://www.reddit.com/help/privacypolicy/">
                 Privacy Policy {""}
               </a>
               and {""}
-              <a
-                target="_blank"
-                href="https://www.reddit.com/help/contentpolicy/"
-              >
+              <a href="https://www.reddit.com/help/contentpolicy/">
                 Content Policy
               </a>
               .
