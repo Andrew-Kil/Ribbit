@@ -100,10 +100,10 @@ textarea {
   height: 20px;
 }
 
-.upcroak:hover,
+/* .upcroak:hover,
 .downcroak:hover {
   border: 1px solid green;
-}
+} */
 
 .title-input {
   width: 700px;

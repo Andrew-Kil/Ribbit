@@ -23,7 +23,10 @@ export default function RibbitPremium() {
               </span>
             </span>
             <div className="premium-side-bar-button">
-              <a className="premium-side-bar-get-premium" href="/get-premium">
+              <a
+                className="premium-side-bar-get-premium"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              >
                 <button className="try-premium-button">TRY NOW</button>
               </a>
             </div>
