@@ -1,0 +1,16 @@
+.user-profile-container {
+  margin-top: 50px;
+  margin-right: 50px;
+  padding-left: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  width: 300px;
+  height: 200px;
+  float: right;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+}

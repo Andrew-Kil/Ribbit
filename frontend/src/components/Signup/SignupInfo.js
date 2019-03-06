@@ -105,7 +105,7 @@ export default class SignupInfo extends Component {
           <p>beer_pond_champion8572</p>
           <br />
 
-          <p>{this.state.message}</p>
+          <p className="signup-message">{this.state.message}</p>
           <Link to="/signup">
             <button className="back-button">Back</button>
           </Link>

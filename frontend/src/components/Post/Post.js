@@ -44,14 +44,16 @@ export default class Post extends Component {
               to={`/subribbits/posts/${this.state.post.sub_id}`}
               className="post-subribbit"
             >
-              r/{this.state.post.sub_id}
+              r/{this.state.post.name}
             </Link>
             <Link
               to={`/users/${this.state.post.user_id}`}
               className="post-ribbitor"
             >
               Posted by{" "}
-              <span className="ribbitor-link">u/{this.state.post.user_id}</span>
+              <span className="ribbitor-link">
+                u/{this.state.post.username}
+              </span>
             </Link>
             <span className="post-creation">{this.state.post.created_at}</span>
             <br />

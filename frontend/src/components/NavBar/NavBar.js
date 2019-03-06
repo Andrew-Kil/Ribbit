@@ -230,27 +230,6 @@ export default class NavBar extends Component {
             >
               <div className="dropdown-spacing" />
 
-              {/* <div className="dropdown-links-container">
-                <NavLink to={"/ribbit-coins"} className="dropdown-links">
-                  Ribbit Coins
-                </NavLink>
-              </div>
-              <div className="dropdown-links-container">
-                <NavLink to={"/ribbit-premium"} className="dropdown-links">
-                  Ribbit Premium
-                </NavLink>
-              </div>
-              <div className="dropdown-links-container">
-                <NavLink to={"/help-center"} className="dropdown-links">
-                  Help Center
-                </NavLink>
-              </div>
-              <div className="dropdown-links-container">
-                <NavLink to={"/old-ribbit"} className="dropdown-links">
-                  Visit Old Ribbit
-                </NavLink>
-              </div> */}
-
               <div
                 className="dropdown-links-container"
                 onClick={this.toggleDarkMode}

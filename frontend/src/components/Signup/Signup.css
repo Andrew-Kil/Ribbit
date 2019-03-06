@@ -145,3 +145,7 @@ a {
 .signup-button {
   float: right;
 }
+
+.signup-message {
+  margin-left: 555px;
+}

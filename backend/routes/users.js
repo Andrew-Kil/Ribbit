@@ -18,8 +18,12 @@ const {
 
 router.get("/", getAllUsers);
 router.get("/:id", getSingleUser);
-router.get("/:id/posts", getAllPostsForAUser);
-router.get("/:id/comments", getAllCommentsForAUser);
+
+// router.get("/:id", getAllPostsForAUser);
+// router.get("/:id", getAllCommentsForAUser);
+// router.get("/:id/posts", getAllPostsForAUser);
+// router.get("/:id/comments", getAllCommentsForAUser);
+
 router.put("/:id", updateUser);
 router.delete("/:id", deleteUser);
 router.post("/new", createUser);

@@ -16,7 +16,10 @@ const getAllPosts = (req, res, next) => {
 
 const getSinglePost = (req, res, next) => {
   const postId = Number(req.params.id);
-  db.one("SELECT * FROM posts WHERE posts.id=$1", postId)
+  db.one(
+    "SELECT posts.*, subribbits.name, users.username FROM posts JOIN subribbits ON posts.sub_id=subribbits.id JOIN users ON posts.user_id=users.id WHERE posts.id=$1",
+    postId
+  )
     .then(data => {
       res.status(200).json({
         status: "Success",

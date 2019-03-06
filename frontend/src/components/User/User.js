@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
+import "./User.css";
+import user_avatar from "./avatar/user-profile-avatar.png";
 
 export default class User extends React.Component {
   constructor() {
@@ -21,11 +23,15 @@ export default class User extends React.Component {
       return <div> Could not find user </div>;
     } else {
       return (
-        <div>
-          Name: {user.username} <br />
-          Email: {user.email} <br />
-          Cake Day: {user.created_at} <br />
-        </div>
+        <>
+          <div className="user-profile-container">
+            <img src={user_avatar} alt="user avatar" className="user-avatar" />
+            <br />
+            u/{user.username} <br /> <br />
+            Karma: 281,938 <br />
+            Cake Day: {user.created_at} <br />
+          </div>
+        </>
       );
     }
   };
@@ -41,11 +47,6 @@ export default class User extends React.Component {
   }
 
   render() {
-    return (
-      <>
-        {this.renderUser()}
-        <Link to="/users">Back to users</Link>
-      </>
-    );
+    return <>{this.renderUser()}</>;
   }
 }
