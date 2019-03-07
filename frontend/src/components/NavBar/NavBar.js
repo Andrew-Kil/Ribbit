@@ -72,19 +72,6 @@ export default class NavBar extends Component {
       : document.body.classList.add("dark-mode");
   };
 
-  // showMenu = () => {
-  //   const dropDownClicked = this.state.dropdownClicked;
-  //   this.setState({
-  //     dropdownClicked: !dropDownClicked
-  //   });
-  //   if (dropDownClicked) {
-  //     document.body.classList.add("show");
-  //   } else {
-  //     document.body.classList.remove("show");
-  //   }
-  //   console.log("clicked!");
-  // };
-
   showMenu(event) {
     event.preventDefault();
 
@@ -177,25 +164,6 @@ export default class NavBar extends Component {
           </form>
         </div>
 
-        {/* <NavLink to={"/users"}>
-          <div className="user-profile-container">
-            <button className="user-profile-button">
-              <div className="user-profile">
-                <img
-                  src={user_profile_avatar}
-                  className="user-profile-avatar"
-                  alt="avatar for user"
-                />
-                <span className="user-profile-name">what_the_frog_m8</span>
-                <div>
-                  <img src={fly} alt="fly" id="fly" />
-                  <span className="user-profile-karma">182 karma</span>
-                </div>
-              </div>
-            </button>
-          </div>
-        </NavLink> */}
-
         <div className="login-logout-signup">
           <NavLink to={"/login"}>
             <span className="login">Log In</span>
@@ -238,30 +206,22 @@ export default class NavBar extends Component {
                 <img src={darkmode} alt="darkmode icon" id="dark-mode" />
                 <span className="darkmode-text">Dark Mode </span>
               </div>
-              <NavLink to={"/ribbit-coins"}>
-                <div className="dropdown-links">Ribbit Coins</div>
+              <NavLink to={"/users"}>
+                <div className="dropdown-links">Users</div>
               </NavLink>
-              <NavLink to={"/ribbit-premium"}>
-                <div className="dropdown-links">Ribbit Premium</div>
+              <NavLink to={"/posts"}>
+                <div className="dropdown-links">Posts</div>
               </NavLink>
-              <NavLink to={"/help-center"}>
-                <div className="dropdown-links">Help Center</div>
+              <NavLink to={"/comments"}>
+                <div className="dropdown-links">Commments</div>
               </NavLink>
-              <NavLink to={"/old-ribbit"}>
+              <NavLink to={"/subribbits"}>
                 <div className="dropdown-links" id="last-dropdown-link">
-                  Visit Old Ribbit
+                  Subribbits
                 </div>
               </NavLink>
             </div>
           ) : null}
-
-          {/* <div className="dropdown-content">
-            <NavLink to={"/ribbit-coins"}>Ribbit Coins</NavLink>
-            <NavLink to={"/ribbit-premium"}>Ribbit Premium</NavLink>
-            <NavLink to={"/help-center"}>Help Center</NavLink>
-            <NavLink to={"/old-ribbit"}>Visit Old Ribbit</NavLink>
-            <div>hi</div>
-          </div> */}
         </div>
       </nav>
     );

@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import CommunityDetails from "../SideBar/CommunityDetails/CommunityDetails.js";
 
-// import Subribbit from "./Subribbit";
-
 export default class Subribbits extends Component {
   state = {
     subribbits: []

@@ -102,7 +102,6 @@ export default class SubribbitPosts extends Component {
           );
         })}
 
-        {/* <CommunityDetails /> */}
         <div>
           <div className="community-details-side-bar">
             <div className="community-details-side-bar-padding">

@@ -69,9 +69,9 @@ INSERT INTO subribbits
 VALUES
     ('punny', 'This subribbit is a place to post & comment on punny stuff', 75982),
     ('askRibbit', 'Welcome to AskRibbit, feel free to ask any questions that you want answered', 938017),
-    ('ponds', 'Here you can post pictures of your favorite pond to chill at', 17193),
-    ('tadPOLITICS', 'A subribbit to share anything related to politics', 2),
-    ('moo-vies', 'Everything from blockbusters to indie films', 11111),
+    ('IAmA', 'I Am A', 18714293),
+    ('politics', 'A subribbit to share anything related to politics', 2),
+    ('movies', 'Everything from blockbusters to indie films', 11111),
     ('sports', 'The best sports subribbit in all of ribbit.com', 840192),
     ('cooking', 'Post recipes, videos, etc', 938),
     ('healthyHabits', 'Anything related to implementing healthy habits into your life', 8888),
@@ -81,9 +81,11 @@ VALUES
 INSERT INTO posts
     (title, body, created_at, user_id, sub_id)
 VALUES
+    ('do you know why the mushroom was invited to the party?', 'because he is a fungi', '1 year ago', 8, 1),
     ('What did the chinese food restaurant name their band?', 'Wok n Roll', '2 days ago', 7, 1),
     ('Important question', 'How much wood could a woodchuck chuck if a woodchuck couldnt chuck wood?', '1 day ago', 3, 2),
-    ('Insert title here', 'Insert pond picture here', 'a week ago', 3, 3),
+    ('I am Gordon Ramsay. AMA.', 'Hello ribbit. Gordon Ramsay here. This is my first time doing a ribbit AMA, and Im looking forward to answering as many of your questions as time permits this morning.', 'a week ago', 3, 3),
+    ('why was the chef running to the supermarket?', 'he was running out of thyme', '23 hours ago', 10, 1),
     ('Breaking News!', 'Baracka Flaka Obama challenges Donald Drumpf to engage in fisticuffs!!!', '1 minute ago', 7, 4),
     ('BEST FILMS OF THE DECADE', 'Bee Movie, A Bugs Life, Shrek, The Princess and the Frog, Frog Kingdom', '11 hours ago', 4, 5),
     ('Favorite tea?', 'As the title says, what is your favorite type of tea?', '9 hours ago', 1, 2),
@@ -97,6 +99,7 @@ VALUES
     ('Question about recursion', 'Write a function called sumRange. It will take a number and return the sum of all numbers from 1 up to the number passed in. Sample: sumRange(3) returns 6, since 1 + 2 + 3 = 6.', '30 seconds ago', 8, 9),
     ('Proud as can be', 'https://i.redd.it/5kdu8qhyb3k21.jpg', '2 months ago', 9, 10),
     ('How much exercise per week', 'Hi, I wanted to know how many times you guys exercise per week', '51 minutes ago', 10, 8);
+
 
 INSERT INTO comments
     (comment, user_id, post_id, comment_id)
@@ -134,7 +137,12 @@ function sumRange(num){
     ('you need to step up your meme game', 2, 15, null),
     ('a lift my spoon 3 times a day, 7 days a week, if that counts...', 9, 16, null),
     ('lol', 8, 16, 25),
-    ('i run twice a day, 4-5 times a week', 10, 16, null);
+    ('i run twice a day, 4-5 times a week', 10, 16, null),
+    ('Gordon, how do you like your eggs?', 9, 3, null),
+    ('What is your favorite Disney movie?', 3, 3, null),
+    ('What is the best meal you have ever had?', 10, 3, null),
+    ('i will use this joke on my next date', 6, 17, null),
+    ('it gouda been better, no big dill', 7, 18, null);
 
 INSERT INTO croaks
     (croak_value, croaker_id, post_id, comment_id)

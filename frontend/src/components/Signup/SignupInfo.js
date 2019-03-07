@@ -55,16 +55,6 @@ export default class SignupInfo extends Component {
             <br />
           </p>
 
-          {/* <fieldset className="email-fieldset">
-            <input
-              type="email"
-              name="email"
-              className="signup-input-email"
-              onChange={this.handleChange}
-            />
-            <label class="email-input-label">Email</label>
-          </fieldset> */}
-
           <fieldset className="username-fieldset">
             <input
               type="text"
@@ -109,11 +99,9 @@ export default class SignupInfo extends Component {
           <Link to="/signup">
             <button className="back-button">Back</button>
           </Link>
-          {/* <Link to="/"> */}
           <button type="submit" className="signup-button">
             Sign Up
           </button>
-          {/* </Link> */}
         </form>
       </div>
     );

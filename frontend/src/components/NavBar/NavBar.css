@@ -1,20 +1,11 @@
-#dark-mode {
-  /* background-image: linear-gradient(to bottom right, black, lightslategrey);
-  border: 2px black solid;
-  border-radius: 5px;
-  color: white;
-  font-size: 16px;
-  margin-top: 30px; */
+/*
+* === DARK MODE ===
+*/
 
+#dark-mode {
   width: 20px;
   height: 20px;
   padding-right: 10px;
-  /* border: 2px lightgray solid;
-  border-radius: 5px; */
-}
-
-#last-dropdown-link {
-  border-radius: 0 0 5px 5px;
 }
 
 .darkmode-text {
@@ -23,6 +14,14 @@
   font-weight: bold;
   color: black;
   background-color: white;
+}
+
+/*
+* === DARK MODE ===
+*/
+
+#last-dropdown-link {
+  border-radius: 0 0 5px 5px;
 }
 
 .navbar {
@@ -53,13 +52,6 @@
 }
 
 .icon-label {
-  /* position: absolute;
-  top: 50%;
-  left: 0px;
-  height: 18px;
-  margin-left: 16px;
-  margin-top: -9px; */
-
   margin: 0;
   padding: 0;
   border: 0;
@@ -72,10 +64,6 @@
   position: relative;
   padding-top: 20px;
 }
-
-/* .nav-links {
-  background-color: white;
-} */
 
 .logo {
   float: left;
@@ -90,8 +78,6 @@
 }
 
 .search-container {
-  /* display: inline-flex; */
-  /* flex: 1 1 300px; */
   border: 1px solid lightslategrey;
   border-radius: 5px;
   overflow: hidden;
@@ -99,12 +85,6 @@
 }
 
 .search-bar {
-  /* font-size: 16px;
-  border: none;
-  padding-left: 20px;
-  padding-bottom: 10px; */
-
-  -webkit-appearance: none;
   background-color: rgb(246, 247, 248);
   box-shadow: none;
   color: rgb(28, 28, 28);
@@ -122,12 +102,8 @@
 }
 
 .user-profile-container {
-  /* float: right; */
   padding-right: 50px;
-  /* padding-bottom: 100px; */
   padding-top: 10px;
-  /* height: 100%; */
-  /* position: relative; */
 }
 
 .user-profile-avatar {
@@ -225,10 +201,6 @@
 }
 
 .dropdown-links-container {
-  /* height: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: black; */
   background-color: white;
   padding-top: 4px;
   border: 2px white solid;
@@ -262,10 +234,6 @@
   background-color: white;
 }
 
-/* .magnifying-glass {
-  padding-top: 10px;
-} */
-
 .nav-popular {
   font-size: 20px;
   border: 1px solid black;
@@ -279,11 +247,14 @@
 .nav-popular-text {
   margin-top: 10px;
   font-size: 16px;
+  float: left;
+  padding-left: 10px;
 }
 
 .popular-arrow {
   width: 20px;
   height: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
   padding-top: 10px;
+  float: left;
 }

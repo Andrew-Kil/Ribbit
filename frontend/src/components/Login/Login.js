@@ -20,26 +20,6 @@ export default class Login extends Component {
     });
   };
 
-  // loginUser = e => {
-  //   e.preventDefault();
-  //   const { username, password } = this.state;
-
-  //   axios
-  //     .post("/users/login", { username, password })
-  //     .then(() => {
-  //       Auth.authenticateUser(username);
-  //     })
-  //     .then(() => {
-  //       this.props.checkAuthenticateStatus();
-  //     })
-  //     .then(() => {
-  //       this.setState({
-  //         username: "",
-  //         password: ""
-  //       });
-  //     });
-  // };
-
   handleLogin = e => {
     e.preventDefault();
     console.log("yay");
@@ -51,7 +31,6 @@ export default class Login extends Component {
         password_digest: this.state.password_digest
       })
       .then(res => {
-        debugger;
         Auth.authenticateUser(this.state.username);
       })
       .then(() => {
@@ -107,7 +86,6 @@ export default class Login extends Component {
             />
             <label htmlFor="loginPassword">Password</label>
           </fieldset>
-          {/* <button type="submit" disabled={!this.validateForm()}> */}
           <button type="submit">Sign in</button>
           <p>New to Ribbit?</p>
           <a href="/signup" className="signup-link">

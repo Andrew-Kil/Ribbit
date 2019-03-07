@@ -49,53 +49,11 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   outline: 0;
-  /* line-height: unset; */
   height: 30px;
   width: 155px;
   min-width: 155px;
   padding-top: 14px;
 }
-
-/* .email-input-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  line-height: 12px;
-  position: absolute;
-  display: inline-block;
-  vertical-align: middle;
-  top: 14px;
-  left: 12px;
-  color: #a5a4a4;
-  text-transform: uppercase;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  transition: all 0.2s ease-in-out;
-  pointer-events: none;
-  line-height: 23px;
-} */
-
-/* .email-fieldset {
-  display: block;
-  position: absolute;
-} */
-
-/* .signup-input-username,
-.signup-input-email {
-  border-color: rgba(0, 0, 0, 0.2);
-  transform: translateZ(0);
-  outline: 0;
-  width: 400px;
-  -webkit-appearance: none;
-  transition: all 0.2s ease-in-out;
-  height: 18px;
-  padding: 22px 12px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  background-color: #fcfcfb;
-} */
 
 .signup-input-password,
 .signup-input-username,

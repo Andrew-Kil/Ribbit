@@ -37,21 +37,3 @@
   line-height: 22px;
   margin: 20px 0;
 }
-
-/* .username-text-input {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  position: absolute;
-  display: inline-block;
-  vertical-align: middle;
-  top: 14px;
-  left: 12px;
-  color: rgb(165, 164, 164);
-  text-transform: uppercase;
-  transform: translateZ(0px);
-  transform-origin: 0px 50%;
-  pointer-events: none;
-  line-height: 23px;
-  transition: all 0.2s ease-in-out 0s;
-} */
