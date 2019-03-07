@@ -11,11 +11,11 @@ export default function RibbitPremium() {
       <div className="premium-side-bar">
         <div className="premium-side-bar-padding">
           <div className="premium-side-bar-body">
-            <img
+            {/* <img
               src={lilypad}
               alt="lilypad - ribbit premium icon"
               className="lilypad"
-            />
+            /> */}
             <span className="premium-side-bar-body-header">
               Ribbit Premium <br />
               <span className="premium-side-bar-body-text">

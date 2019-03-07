@@ -81,9 +81,9 @@ VALUES
 INSERT INTO posts
     (title, body, created_at, user_id, sub_id)
 VALUES
-    ('do you know why the mushroom was invited to the party?', 'because he is a fungi', '1 year ago', 8, 1),
-    ('What did the chinese food restaurant name their band?', 'Wok n Roll', '2 days ago', 7, 1),
+    ('do you know why the mushroom was invited to the party?', 'because he was a fungi', '1 year ago', 8, 1),
     ('Important question', 'How much wood could a woodchuck chuck if a woodchuck couldnt chuck wood?', '1 day ago', 3, 2),
+    ('What did the chinese food restaurant name their band?', 'Wok n Roll', '2 days ago', 7, 1),
     ('I am Gordon Ramsay. AMA.', 'Hello ribbit. Gordon Ramsay here. This is my first time doing a ribbit AMA, and Im looking forward to answering as many of your questions as time permits this morning.', 'a week ago', 3, 3),
     ('why was the chef running to the supermarket?', 'he was running out of thyme', '23 hours ago', 10, 1),
     ('Breaking News!', 'Baracka Flaka Obama challenges Donald Drumpf to engage in fisticuffs!!!', '1 minute ago', 7, 4),
@@ -106,43 +106,36 @@ INSERT INTO comments
 VALUES
     ('great post, would comment again', 1, 2, null),
     ('I can jump 5 feet high', 2, 12, null),
-    ('green tea', 3, 6, null),
+    ('green tea', 3, 8, null),
     ('your comment is trash and so are you', 2, 2, 1),
     ('I can jump 6 feet high', 4, 12, 2),
-    ('$1000 on Baracka', 1, 4, null),
-    ('No way jose, my moneys on Drumpf', 6, 4, 6),
-    ('What about Shrek 2?!', 5, 5, null),
-    ('Why yes, it was a splendid movie', 7, 5, 8),
-    ('My favorite recipe is from Maangchi. You can find her on youtube or buy her book :)', 6, 8, null),
-    ('Yes that is also my favorite recipe! Lettuce meat and be friends', 7, 8, 10),
-    ('My meditation is as follows: I have no meditation routine.', 4, 9, null),
-    ('Wow you are so punny m8', 2, 13, null),
-    ('No that was not punny and you should be ashamed', 7, 13, 13),
-    ('LBJ is the GOAT', 3, 7, null),
-    ('No way are you blind?', 6, 7, 15),
-    ('That was funny... but now I am craving beef and broccoli', 4, 1, null),
-    ('If you call right now you can still make it in time for the lunch special!', 7, 1, 17),
+    ('$1000 on Baracka', 1, 6, null),
+    ('No way jose, my moneys on Drumpf', 6, 6, 6),
+    ('What about Shrek 2?!', 5, 7, null),
+    ('Why yes, it was a splendid movie', 7, 7, 8),
+    ('My favorite recipe is from Maangchi. You can find her on youtube or buy her book :)', 6, 10, null),
+    ('Yes that is also my favorite recipe! Lettuce meat and be friends', 7, 10, 10),
+    ('My meditation is as follows: I have no meditation routine.', 4, 11, null),
+    ('Wow you are so punny m8', 2, 1, null),
+    ('No that was not punny and you should be ashamed', 7, 1, 13),
+    ('LBJ is the GOAT', 3, 9, null),
+    ('No way are you blind?', 6, 9, 15),
+    ('That was funny... but now I am craving beef and broccoli', 4, 3, null),
+    ('If you call right now you can still make it in time for the lunch special!', 7, 3, 17),
     ('Definitely Lizard', 2, 13, null),
     ('Human!', 6, 13, null),
-    ('var output = sumRange(3)
-console.log(output);
-
-function sumRange(num){
-	if(num == 1) return 1;
-
-	return num + sumRange(num - 1);
-}', 8, 14, null),
-    ('great answer!', 9, 14, 21),
-    ('that meme is so dank that it stanks', 10, 15, null),
-    ('you need to step up your meme game', 2, 15, null),
+    ('var output = sumRange(3) console.log(output); function sumRange(num){ if(num == 1) return 1; return num + sumRange(num - 1); }', 8, 16, null),
+    ('great answer!', 9, 16, 21),
+    ('that meme is so dank that it stanks', 10, 17, null),
+    ('you need to step up your meme game', 2, 17, null),
     ('a lift my spoon 3 times a day, 7 days a week, if that counts...', 9, 16, null),
-    ('lol', 8, 16, 25),
-    ('i run twice a day, 4-5 times a week', 10, 16, null),
-    ('Gordon, how do you like your eggs?', 9, 3, null),
-    ('What is your favorite Disney movie?', 3, 3, null),
-    ('What is the best meal you have ever had?', 10, 3, null),
-    ('i will use this joke on my next date', 6, 17, null),
-    ('it gouda been better, no big dill', 7, 18, null);
+    ('lol', 8, 18, 25),
+    ('i run twice a day, 4-5 times a week', 10, 18, null),
+    ('Gordon, how do you like your eggs?', 9, 4, null),
+    ('What is your favorite Disney movie?', 3, 4, null),
+    ('What is the best meal you have ever had?', 10, 4, null),
+    ('i will use this joke on my next date', 6, 1, null),
+    ('it is punny but it gouda been better, no big dill', 7, 5, null);
 
 INSERT INTO croaks
     (croak_value, croaker_id, post_id, comment_id)

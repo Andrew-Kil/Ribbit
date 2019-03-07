@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar.js";
+import axios from "axios";
+import Auth from "./utils/Auth.js";
 
 import "./App.css";
 
@@ -19,6 +21,32 @@ import Subribbit from "./components/Subribbits/Subribbit.js";
 import SubribbitPosts from "./components/Subribbits/SubribbitPosts.js";
 
 class App extends Component {
+  state = {
+    isLoggedIn: false,
+    user: ""
+  };
+
+  componentDidMount() {
+    this.checkAuthenticateStatus();
+  }
+
+  checkAuthenticateStatus = () => {
+    axios.get("/users/isLoggedIn").then(user => {
+      if (user.data.username === Auth.getToken()) {
+        this.setState({
+          isLoggedIn: Auth.isUserAuthenticated(),
+          username: Auth.getToken()
+        });
+      } else {
+        if (user.data.username) {
+          this.logoutUser();
+        } else {
+          Auth.deauthenticateUser();
+        }
+      }
+    });
+  };
+
   render() {
     return (
       <div className="App">

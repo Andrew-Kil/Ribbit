@@ -1,5 +1,5 @@
 .premium-side-bar {
-  height: 100px;
+  height: 60px;
   width: 312px;
   border: 1px grey solid;
   border-radius: 5px;
@@ -12,6 +12,7 @@
 .premium-side-bar-body {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .premium-side-bar-padding {
@@ -33,7 +34,7 @@
 }
 
 .home-side-bar-body-text {
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 1em;
 }
 

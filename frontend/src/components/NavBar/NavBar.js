@@ -72,34 +72,33 @@ export default class NavBar extends Component {
       : document.body.classList.add("dark-mode");
   };
 
-  showMenu(event) {
-    event.preventDefault();
-
+  showMenu(e) {
+    e.preventDefault();
     this.setState({ showMenu: true }, () => {
       document.addEventListener("click", this.closeMenu);
     });
   }
 
-  closeMenu(event) {
-    if (!this.dropdownMenu.contains(event.target)) {
+  closeMenu(e) {
+    if (!this.dropdownMenu.contains(e.target)) {
       this.setState({ showMenu: false }, () => {
         document.removeEventListener("click", this.closeMenu);
       });
     }
   }
 
-  logoutUser = () => {
-    axios
-      .post("/users/logout")
-      .then(() => {
-        Auth.deauthenticateUser();
-      })
-      .then(() => {
-        this.checkAuthenticateStatus();
-      });
+  // logoutUser = () => {
+  //   axios
+  //     .post("/users/logout")
+  //     .then(() => {
+  //       Auth.deauthenticateUser();
+  //     })
+  //     .then(() => {
+  //       this.checkAuthenticateStatus();
+  //     });
 
-    console.log("USER LOGGED OUT");
-  };
+  //   console.log("USER LOGGED OUT");
+  // };
 
   render() {
     // const { isLoggedIn } = this.state;
@@ -173,6 +172,7 @@ export default class NavBar extends Component {
             <span className="signup">Sign Up</span>
           </NavLink>
         </div>
+
         <div className="user-dropdown" onClick={this.showMenu}>
           <button className="nav-dropdown-menu">
             <div className="icon-container">
@@ -188,7 +188,6 @@ export default class NavBar extends Component {
               />
             </div>
           </button>
-
           {this.state.showMenu ? (
             <div
               className="menu"

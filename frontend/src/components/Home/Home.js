@@ -8,6 +8,9 @@ import RibbitPremium from "../SideBar/RibbitPremium/RibbitPremium.js";
 import Posts from "../Post/Posts.js";
 
 import trending from "./trending.png";
+import lbj from "./lbj.jpeg";
+import movie from "./movie.png";
+import gordon from "./gordon.jpeg";
 
 export default class Home extends React.Component {
   render() {
@@ -18,33 +21,31 @@ export default class Home extends React.Component {
           <div className="trending-container">
             <div className="trending-content-container">
               <div className="trending-content-1">
-                <a href="/posts/9">
+                <a href="/posts/4">
                   <div className="trending-content-box">
-                    <img src={trending} alt="trending" className="trending" />
-                    <h4 className="trending-content-box-text">Meditation</h4>
+                    <img src={gordon} alt="trending" className="trending" />
+                    <h4 className="trending-content-box-text">Gordon Ramsay</h4>
                   </div>
                 </a>
               </div>
               <div className="trending-content-2">
-                <a href="/posts/5">
+                <a href="/posts/7">
                   <div className="trending-content-box">
-                    <img src={trending} alt="trending" className="trending" />
-                    <h4 className="trending-content-box-text">
-                      BEST FILMS OF THE DECADE
-                    </h4>
+                    <img src={movie} alt="trending" className="trending" />
+                    <h4 className="trending-content-box-text">Best Films</h4>
                   </div>
                 </a>
               </div>
               <div className="trending-content-3">
-                <a href="/posts/7">
+                <a href="/posts/9">
                   <div className="trending-content-box">
-                    <img src={trending} alt="trending" className="trending" />
+                    <img src={lbj} alt="trending" className="trending" />
                     <h4 className="trending-content-box-text">LeBron James</h4>
                   </div>
                 </a>
               </div>
               <div className="trending-content-4">
-                <a href="/posts/4">
+                <a href="/posts/6">
                   <div className="trending-content-box">
                     <img src={trending} alt="trending" className="trending" />
                     <h4 className="trending-content-box-text">

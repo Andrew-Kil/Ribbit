@@ -22,13 +22,14 @@ export default class Login extends Component {
 
   handleLogin = e => {
     e.preventDefault();
-    console.log("yay");
     console.log(this.state);
+
+    const { username, password_digest } = this.state;
 
     axios
       .post("/users/login", {
-        username: this.state.username,
-        password_digest: this.state.password_digest
+        username,
+        password_digest
       })
       .then(res => {
         Auth.authenticateUser(this.state.username);
