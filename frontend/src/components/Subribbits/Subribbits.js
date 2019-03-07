@@ -23,13 +23,11 @@ export default class Subribbits extends Component {
       <>
         <div>List of subribbits: </div>
         <br />
-        <div>(Click on subribbit to get more info)</div>
         <br />
         {this.state.subribbits.map(subribbit => {
           return (
             <div key={subribbit.id}>
-              Name: {""}
-              <Link to={`/subribbits/${subribbit.id}`}>{subribbit.name}</Link>
+              <Link to={`/subribbits/${subribbit.id}`}>r/{subribbit.name}</Link>
               <br /> <br />
             </div>
           );

@@ -8,8 +8,6 @@ import chat_icon from "./icons/chat-icon.png";
 import up_arrow from "./icons/up-arrow.png";
 import down_arrow from "./icons/down-arrow.png";
 
-// import Home from "../Home/Home.js";
-
 export default class Posts extends Component {
   state = {
     posts: []
@@ -25,11 +23,8 @@ export default class Posts extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <>
-        {/* <Home data={this.state} /> */}
-
         <br />
 
         {this.state.posts.map(post => {

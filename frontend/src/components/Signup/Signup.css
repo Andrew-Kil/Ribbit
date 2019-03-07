@@ -20,6 +20,7 @@ a {
   padding-left: 80px;
   padding-top: 40px;
   padding-right: 80px;
+  padding-bottom: 40px;
 }
 
 .signup-title {
@@ -95,9 +96,28 @@ a {
 
 .signup-button,
 .back-button {
-  width: 80px;
+  /* width: 80px;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 5px; */
+  font-family: IBMPlexSans, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background: #0079d3;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: 0;
+  height: 30px;
+  width: 155px;
+  min-width: 155px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  height: 50px;
 }
 
 .signup-button {
@@ -106,4 +126,9 @@ a {
 
 .signup-message {
   margin-left: 555px;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  width: 218px;
+  margin-bottom: 20px;
 }

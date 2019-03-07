@@ -8,14 +8,9 @@ import RibbitPremium from "../SideBar/RibbitPremium/RibbitPremium.js";
 import Posts from "../Post/Posts.js";
 
 import trending from "./trending.png";
-// import lilypad from "./lilypad.png";
-// import pond from "./pond.png";
-// import frog from "./frog.jpg";
-// import frogvstoad from "./frogvstoad.png";
 
 export default class Home extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div>
         <div className="body-container">
@@ -76,22 +71,6 @@ export default class Home extends React.Component {
               <br />
               <div className="post-container">
                 <Posts />
-                {/* {this.props.data.posts.map(post => {
-                  return (
-                    <div id={post.id}>
-                      <div>{this.props.data.title}</div>
-                      <div>{this.props.data.body}</div>
-                      <div>{this.props.data.user_id}</div>
-                      <div>{this.props.data.upcroaks}</div>
-                      <div>{this.props.data.downcroaks}</div>
-                    </div>
-                  );
-                })} */}
-                {/* <div>{this.props.data.title}</div>
-                <div>{this.props.data.body}</div>
-                <div>{this.props.data.user_id}</div>
-                <div>{this.props.data.upcroaks}</div>
-                <div>{this.props.data.downcroaks}</div> */}
               </div>
             </div>
 

@@ -31,25 +31,25 @@ export default class NavBar extends Component {
   }
 
   componentDidMount() {
-    this.checkAuthenticateStatus();
+    // this.checkAuthenticateStatus();
   }
 
-  checkAuthenticateStatus = () => {
-    axios.get("/users/isLoggedIn").then(user => {
-      if (user.data.username === Auth.getToken()) {
-        this.setState({
-          isLoggedIn: Auth.isUserAuthenticated(),
-          username: Auth.getToken()
-        });
-      } else {
-        if (user.data.username) {
-          this.logoutUser();
-        } else {
-          Auth.deauthenticateUser();
-        }
-      }
-    });
-  };
+  // checkAuthenticateStatus = () => {
+  //   axios.get("/users/isLoggedIn").then(user => {
+  //     if (user.data.username === Auth.getToken()) {
+  //       this.setState({
+  //         isLoggedIn: Auth.isUserAuthenticated(),
+  //         username: Auth.getToken()
+  //       });
+  //     } else {
+  //       if (user.data.username) {
+  //         this.logoutUser();
+  //       } else {
+  //         Auth.deauthenticateUser();
+  //       }
+  //     }
+  //   });
+  // };
 
   handleChange = e => {
     this.setState({

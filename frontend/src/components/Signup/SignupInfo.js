@@ -30,7 +30,7 @@ export default class SignupInfo extends Component {
         this.setState({
           username: "",
           password_digest: "",
-          message: "!!!Created new user!!!"
+          message: "CREATED NEW USER!"
         });
       })
       .catch(err => {
@@ -42,7 +42,6 @@ export default class SignupInfo extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div className="form-container">
         <form onSubmit={this.handleSubmit} className="form-spacing">
@@ -83,7 +82,7 @@ export default class SignupInfo extends Component {
               onChange={this.handleChange}
             />
             <br />
-            <label class="email-input-label">Email</label>
+            <label className="email-input-label">Email</label>
           </fieldset>
           <br />
           <p>Here are some username suggestions:</p>

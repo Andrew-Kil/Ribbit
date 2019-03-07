@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import CommunityDetails from "../SideBar/CommunityDetails/CommunityDetails.js";
-
-import Subribbit from "./Subribbit";
-
 export default class SubribbitPosts extends Component {
   state = {
     subribbitPosts: []

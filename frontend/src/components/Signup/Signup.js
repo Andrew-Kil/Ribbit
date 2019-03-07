@@ -46,7 +46,7 @@ export default class Signup extends Component {
             <br />
             <div className="text-bottom">
               Already a Ribbitor? {""}
-              <a class="link-bottom" href="/login">
+              <a className="link-bottom" href="/login">
                 LOG IN
               </a>
             </div>

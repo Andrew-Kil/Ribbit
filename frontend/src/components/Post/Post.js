@@ -20,7 +20,6 @@ export default class Post extends Component {
   getOne = id => this.state.posts.find(post => post.id === id);
 
   renderPost = () => {
-    console.log(this.state.posts);
     const { id } = this.props.match.params;
     const post = this.state.posts.find(post => post.id === Number(id));
     if (!post) {
@@ -101,11 +100,10 @@ export default class Post extends Component {
           <div className="post-field-spacing" />
           {this.state.posts.map(post => {
             return (
-              <>
-                <div key={post.id} className="post-field">
-                  <div>User ID: {post.user_id}</div>
-                  <div>{post.comment}</div>
-                </div>
+              <div key={post.id} className="post-field">
+                <div>User ID: {post.user_id}</div>
+                <div>{post.comment}</div>
+
                 {/* <div key={post.id} className="post-field">
                   <Link
                     to={`/subribbits/${post.sub_id}`}
@@ -132,7 +130,7 @@ export default class Post extends Component {
                   </Link>
                 </div> */}
                 <div className="post-field-spacing" />
-              </>
+              </div>
             );
           })}
         </>
@@ -167,7 +165,6 @@ export default class Post extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <>
         {this.renderPost()}
