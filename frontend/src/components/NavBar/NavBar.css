@@ -16,6 +16,11 @@
   background-color: white;
 }
 
+.dark-mode {
+  background-color: #030303;
+  color: gray;
+}
+
 /*
 * === DARK MODE ===
 */
@@ -176,10 +181,6 @@
   border-style: solid;
   border-color: rgb(46, 0, 211);
   border-image: initial;
-}
-
-.dark-mode {
-  background-color: #030303;
 }
 
 .show {

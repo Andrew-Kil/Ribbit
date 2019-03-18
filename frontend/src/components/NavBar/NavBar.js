@@ -25,14 +25,11 @@ export default class NavBar extends Component {
       dropdownClicked: false,
       showMenu: false
     };
-
-    this.showMenu = this.showMenu.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
   }
 
-  componentDidMount() {
-    // this.checkAuthenticateStatus();
-  }
+  // componentDidMount() {
+  //   this.checkAuthenticateStatus();
+  // }
 
   // checkAuthenticateStatus = () => {
   //   axios.get("/users/isLoggedIn").then(user => {
@@ -72,20 +69,21 @@ export default class NavBar extends Component {
       : document.body.classList.add("dark-mode");
   };
 
-  showMenu(e) {
+  showMenu = e => {
     e.preventDefault();
     this.setState({ showMenu: true }, () => {
       document.addEventListener("click", this.closeMenu);
     });
-  }
+  };
 
-  closeMenu(e) {
+  closeMenu = e => {
+    console.log(e.target);
     if (!this.dropdownMenu.contains(e.target)) {
       this.setState({ showMenu: false }, () => {
         document.removeEventListener("click", this.closeMenu);
       });
     }
-  }
+  };
 
   // logoutUser = () => {
   //   axios
